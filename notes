@@ -38,3 +38,20 @@ variables
 - we cannot define const without initalizing. else it will throw an error  Missing initializer in const declaration.
 - using var we can define same variable name n times but cannot with let and const
 - let and const have block scope.
+
+data types:
+primitive datatypes means primary data types
+primitive datatypes:
+- Numbers
+- string
+- boolean
+
+special:
+- undefined
+- null
+
+Composite:
+- array
+- object
+
+- - javascript is a dynamic typed language.
