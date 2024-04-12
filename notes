@@ -1,0 +1,6 @@
+- Javascript can be used for dynamic interaction for our web page.
+- JS it is a scripting language. means suppose you have written 10lines of code and if the error is at 9th line then till line 8 it will get output.
+- 3 ways we can print in js.
+1. alert()
+2. document.write() // our page is treated as object in javascript and we call it as document.
+3. innerhtml // <h1>this is innerhtml</h1> the content between the tags.
