@@ -1,6 +1,35 @@
 - Javascript can be used for dynamic interaction for our web page.
 - JS it is a scripting language. means suppose you have written 10lines of code and if the error is at 9th line then till line 8 it will get output.
 - 3 ways we can print in js.
+
 1. alert()
 2. document.write() // our page is treated as object in javascript and we call it as document.
 3. innerhtml // <h1>this is innerhtml</h1> the content between the tags.
+
+- Roadmap:
+  Basics:
+1. js and its features.
+2. variables
+3. datatypes
+4. operators
+5. conditional & control statements
+6. loops
+7. data structures //arrays, maps, sets etc.
+8. scopes
+9. objects
+10. functions
+11. form validations
+12. DOM manipulation
+13. events
+14. BOM elements //browser object modal
+    advance: 
+15. prototyping
+16. proto type inheritance
+17. call backs
+18. IIFE
+19. promises
+20. Ajax
+21. Async await
+22. closures
+23. OPPs concept
+24. JSON

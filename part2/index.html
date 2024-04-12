@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="data"></p>
+    <script>
+      let arrays = [
+        "Basics: ",
+        "1. js and its features.",
+        "2. variables;",
+        "3. datatypes",
+        "4. operators",
+        "5. conditional & control statements",
+        "6. loops",
+        "7. data structures",
+        "8. scopes",
+        "9. objects",
+        "10. functions",
+        "11. form validations",
+        "12. DOM manipulation",
+        "13. events",
+        "14. BOM elements",
+        "advance:",
+        "15. prototyping",
+        "16. proto type inheritance",
+        "17. call backs",
+        "18. IIFE",
+        "19. promises",
+        "20. Ajax",
+        "21. Async await",
+        "22. closures",
+        "23. OPPs concept",
+        "24. JSON"
+      ];
+
+      let p = document.getElementById("data");
+      for (let i = 0; i < arrays.length; i++) {
+        p.innerHTML += arrays[i] + "<br/>";
+      }
+    </script>
+  </body>
+</html>
