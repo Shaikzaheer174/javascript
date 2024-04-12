@@ -33,3 +33,7 @@
 22. closures
 23. OPPs concept
 24. JSON
+
+variables
+- we cannot define const without initalizing. else it will throw an error  Missing initializer in const declaration.
+- using var we can define same variable name n times but cannot with let and const
