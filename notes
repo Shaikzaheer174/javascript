@@ -7,6 +7,7 @@
 3. innerhtml // <h1>this is innerhtml</h1> the content between the tags.
 
 - Roadmap:
+----------
   Basics:
 1. js and its features.
 2. variables
@@ -35,11 +36,13 @@
 24. JSON
 
 variables
+---------
 - we cannot define const without initalizing. else it will throw an error  Missing initializer in const declaration.
 - using var we can define same variable name n times but cannot with let and const
 - let and const have block scope.
 
 data types:
+-----------
 primitive datatypes means primary data types
 primitive datatypes:
 - Numbers
@@ -55,3 +58,24 @@ Composite:
 - object
 
 - - javascript is a dynamic typed language.
+
+operators:
+---------
+Arithmetic opeartors
+comparison operators
+logical operators
+assignment operators
+type operators
+bitwise operators
+ternary operators
+unary operators (post and pre increment/decrement)
+
+logical operators:
+&& operator returns value of the second operand if the first operand evaluates to true
+only in case of 0 or empty string '' , it is false 
+
+Bitwise operators:
+converts numbers into binary system then performs the operations.
+
+ternary operators:
+Three operands --> condition ? expression1 : expression2;
