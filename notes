@@ -82,3 +82,10 @@ Three operands --> condition ? expression1 : expression2;
 
 - typecasting or type conversion
 - implicit and explicit conversion
+
+
+types of conditional statements:
+1. if statement
+2. if-else statement
+3. if-else if-else statement
+4. switch statement
