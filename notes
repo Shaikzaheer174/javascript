@@ -89,3 +89,12 @@ types of conditional statements:
 2. if-else statement
 3. if-else if-else statement
 4. switch statement
+
+loops:
+to do a task multiple times then we use loops.
+loops are also called as iterative statements
+1. for loop
+2. while loop
+3. do-while loop
+4. for in loop
+5. for of loop
