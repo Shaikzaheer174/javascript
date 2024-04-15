@@ -99,4 +99,9 @@ loops are also called as iterative statements
 4. for in loop
 5. for of loop
 
-template literals
+template literals:
+- `${}`
+
+
+for in VS for of loops
+-used in iterable data types like strings, arrays, objects in these for every element if we want to iterate over then we use the for..in and for..of loops
