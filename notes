@@ -105,3 +105,11 @@ template literals:
 
 for in VS for of loops
 -used in iterable data types like strings, arrays, objects in these for every element if we want to iterate over then we use the for..in and for..of loops
+
+
+arrays:
+1. why arrays
+2. how to declare arrays
+3. how to access arrays elements
+4. how to update or add elements to the array
+5. methods on arrays
