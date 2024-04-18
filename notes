@@ -123,3 +123,8 @@ how to call functions
 what is function expression
 
 types of functions
+
+Scopes in JavaScript
+Global scope
+Local scope
+block level scope
