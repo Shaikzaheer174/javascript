@@ -128,3 +128,5 @@ Scopes in JavaScript
 Global scope
 Local scope
 block level scope
+
+## default and rest parameters
