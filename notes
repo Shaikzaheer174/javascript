@@ -134,3 +134,12 @@ block level scope
 ## foreach method
 
 ## sets
+
+## objects
+- 5 ways we can create objects in javascript
+- 1. Object literals
+- 2. using a new keyword with object constructor
+- 3. using a new keyword with a constructor function
+- 4. Object.create() method
+- 5. Classes
+
