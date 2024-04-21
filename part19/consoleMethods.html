@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Console methods</title>
+  </head>
+  <body>
+    <h1>console.log()</h1>
+    <h1>console.info()</h1>
+    <h1>console.warn()</h1>
+    <h1>console.error()</h1>
+    <h1>console.table()</h1>
+    <h1>console.clear()</h1>
+    <h1>console.assert()</h1>
+    <h1>console.count()</h1>
+    <h1>console.countreset()</h1>
+    <h1>console.time()</h1>
+    <h1>console.timeend()</h1>
+    <h1>console.group()</h1>
+    <h1>console.groupend()</h1>
+
+    <script>
+      console.log("Log methods");
+      console.info("Log methods");
+      console.warn("Log methods");
+      console.error("oh oh, 404 not found");
+      console.table(["dfd", "dfd", "fsf", "sffs", "fsf"]); // should pass either array or object
+      console.clear(); // to clear the console
+      console.assert(10 < 5, "condition false"); // it is like assertion
+
+      console.count("called"); // to check the count
+      console.countReset("called"); // to reset the counter
+
+      console.time("called time");
+      console.timeEnd("called time");
+
+      console.group("group1");
+      console.log("a");
+      console.log("b");
+      console.log("c");
+      console.groupEnd();
+
+      console.log("sd");
+    </script>
+  </body>
+</html>
