@@ -144,3 +144,23 @@ block level scope
 - 5. Classes
 
 ## console methods
+
+## Dom
+- document object model
+- by using HTML DOM javascript can access, change or remove any elements of html document and also can create new elements at any position
+- document object has properties and methods so by using those we can select/modify/remove/create html elements and we can also add/remove/change styles tp HTML elements.
+We have 5 methods to select HTML elements:
+1. document.getElementById("idName") --> returns element with the specified id.
+2. document.getElementsByClassName('className) --> returns list of all elements belong to the specified class.
+3. document.getElementsByTagName("tagName") --> returns list of all elements with the specified tag.
+4. document.querySelector(".class/#id/tagName") --> returns the first object matching css style selector.
+5. document.querySelectorAll(".class/#id/tagName") --> returns all objects matches the css style selector.
+
+document also has properties few of them are :
+1. document.body
+2. document.head
+3. document.title
+4. document.links //anchors
+5. document.forms
+6. document.images
+7. document.scripts
