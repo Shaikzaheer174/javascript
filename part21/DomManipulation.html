@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <div id="first">
+      <p id="one">this is first paragraph in division1</p>
+      <p id="two">this is second paragraph in division1</p>
+    </div>
+
+    <div id="second">
+      <!-- here div is the parent for p's-->
+      <p id="firstParagraph">this is first paragraph in division2</p>
+      <!--child-->
+      <p id="secondParagraph">this is second paragraph in division2</p>
+      <!--child-->
+    </div>
+
+    <script>
+      // created a element
+      let newParagraph = document.createElement("p");
+      // console.log(newParagraph); //<p></p>
+      // console.log(document); //it will show the complete html tree
+
+      // adding content to the tag/element we have created
+      newParagraph.innerText = "this is a special paragraph in division2";
+      //console.log(newParagraph); //<p>this is a third paragraph in division2</p>
+
+      // getting parent element to add the child element
+      let parentElement = document.getElementById("second");
+      //console.log(parentElement);
+
+      // appending child to the parent at the end
+      parentElement.appendChild(newParagraph);
+
+      // innerText is the text between the tags  where innerHTML is the text along with the tags. EX:
+      // console.log(parentElement.innerHTML);
+      // console.log(parentElement.innerText);
+      // so if you are setting data for innertext along with tags then it will ingnore the tags but if you are setting thedata along with tags for innerhtml it will create a tag and text both.
+      // EX:
+      // console.log(newParagraph.innerHTML = "<div>hello</div>")// <div>hello</div>
+      // console.log(newParagraph.innerText = "<div>hello</div>") //it will convert the tags as strings and displays in the web page.
+
+      // how to insert an element before another element:
+      let secondPara = document.getElementById("secondParagraph");
+      parentElement.insertBefore(newParagraph, secondPara); // it inserted the special para before the second paragraph
+
+      //  to remove an element:
+      let firstPara = document.getElementById("firstParagraph");
+      firstPara.remove();
+
+      //to remove child element
+      parent = document.getElementById("first");
+      child = document.getElementById("one");
+      parent.removeChild(child);
+
+      // replaceChild
+      // for the second div second paragraph will replace
+      newHeading = document.createElement("h1");
+      newHeading.innerText = "HEADING CREATED";
+      secondPara.replaceChildren(newHeading);
+    </script>
+  </body>
+</html>

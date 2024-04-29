@@ -164,3 +164,12 @@ document also has properties few of them are :
 5. document.forms
 6. document.images
 7. document.scripts
+
+DOM manipulation:
+1. how to create HTML elements. //only empty tags will get created with out content ex: <h1></h1>
+2. how to set content to element. // we need to set content
+3. how to append a new element //then we need to append new element in the tree note: append will add the element at the end.
+4. how to insert an element before another element //instead of appending at the end to insert it before another element.
+5. how to remove an element //to remove an existing element.
+6. how to remove child element // to remove element's child
+7. how to replace element // to replace an element.
