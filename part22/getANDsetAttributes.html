@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get and set attributes</title>
+  </head>
+  <style>
+    #special {
+      color: blue;
+    }
+
+    .one {
+      background-color: gray;
+    }
+
+    .two {
+      font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+  <body>
+    <div id="special">This is a division</div>
+    <img
+      src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&dpr=1"
+      alt=""
+      id="myImage1"
+    />
+
+    <br />
+    <input type="text" placeholder="Enter text" name="" id="inputText" />
+
+    <div id="special2" class="one">
+      <h1>hellow</h1>
+    </div>
+
+    <script>
+      var x = document.getElementById("special");
+      // console.log(x.style);
+      x.style.color = "red";
+      x.style.border = "2px solid black";
+
+      // adding attribute class to the element
+      // console.log(x.getAttribute("id")); //special
+      x.setAttribute("class", "one");
+
+      var y = document.getElementById("myImage1");
+      y.setAttribute(
+        "src",
+        "https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=200&h=300&dpr=1"
+      );
+
+      z = document.getElementById("inputText");
+      z.setAttribute("value", "hello");
+
+      div2 = document.getElementById("special2");
+      // div2.setAttribute("class", "two");//it removes older values to theattributes so to avoid we have the below
+      div2.classList.add("two");
+      console.log(div2.classList); // ['one', 'two', value: 'one two']
+      div2.classList.remove("one");
+      console.log(div2.classList); // ['two', value: 'two']
+    </script>
+  </body>
+</html>

@@ -173,3 +173,8 @@ DOM manipulation:
 5. how to remove an element //to remove an existing element.
 6. how to remove child element // to remove element's child
 7. how to replace element // to replace an element.
+
+add/change styles in javascript
+1. how to change style of element
+2. how to get attribute value of an element
+3. how to set/change attribute of an element.
