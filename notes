@@ -178,3 +178,10 @@ add/change styles in javascript
 1. how to change style of element
 2. how to get attribute value of an element
 3. how to set/change attribute of an element.
+
+## model windows
+- model windows means after opening our web page, upon that a window is opened(model window) once it is opened, without closing it we can not further interact without web page.
+-js contains mainly 3 model windows.
+1. alert() - to show message to the user
+2. prompt() - to take some input from the user
+3. confirm() - to get confirmation from the user.

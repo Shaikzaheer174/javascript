@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>model windows</title>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, ipsum?
+    </p>
+
+    <h2>Heading 2</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto itaque
+      commodi quos qui quis, minus quas non dolorem voluptatum aperiam veniam
+      numquam ipsam nesciunt doloremque incidunt inventore possimus omnis
+      reiciendis sequi. Natus ipsum tenetur similique voluptas possimus, magni
+      facilis, eligendi velit molestiae exercitationem explicabo, id accusamus.
+      Eum error odit molestias nobis. Sequi, quis dignissimos quos consequuntur
+      doloremque sunt? Quas, deleniti pariatur tempore minus repudiandae
+      sapiente quis facilis dignissimos autem eveniet aperiam libero eum ab
+      eligendi vero labore dolore voluptate tenetur. Commodi est quasi libero
+      quos voluptas molestiae repudiandae facere totam atque nemo odit,
+      accusamus provident ab sunt officia distinctio, porro tenetur impedit ad
+      voluptatem ut delectus! Ut doloribus assumenda optio sint totam ipsum, ad
+      obcaecati possimus reiciendis dolorem quo ea est odio enim officiis eum,
+      quibusdam laudantium, inventore fugiat adipisci amet quaerat? Labore quasi
+      in, repudiandae culpa corrupti rerum. Et assumenda nesciunt libero quidem
+      enim incidunt, vel quaerat eum eos officia, qui ipsa blanditiis ut!
+      Quibusdam iusto exercitationem necessitatibus dolor asperiores quasi modi
+      dolore, amet quod rerum laudantium optio molestias impedit. Porro corrupti
+      velit tenetur harum mollitia totam sint fuga asperiores doloribus,
+      reiciendis temporibus reprehenderit illum voluptas accusantium libero
+      sapiente nemo tempora, repudiandae quaerat adipisci voluptate magni nulla
+      quibusdam. Cupiditate, rem commodi. Tempore eum cum numquam. Alias
+      assumenda laborum expedita odio quidem ipsum mollitia suscipit. Obcaecati
+      ut ratione, nihil eaque sint aperiam perferendis nulla, cupiditate,
+      officiis provident similique aliquam ex laborum error dignissimos? Labore
+      ipsum doloremque ratione sunt sequi error, voluptate minima dolor rem
+      dolores accusantium! Porro, magnam. Dolor, enim ipsum inventore molestias
+      sequi velit impedit ratione quos quod exercitationem, ex obcaecati iste.
+      Est in rem natus dolore facere officia molestias enim vero optio. Ea,
+      tenetur. Dolorum iste voluptatum neque, adipisci voluptatem quia eveniet
+      harum repudiandae minima doloremque in nisi ratione hic id odio dolores
+      placeat sunt perspiciatis ut? Inventore praesentium eius exercitationem
+      ut, dolorem ipsum perspiciatis, impedit, officiis beatae cum aut sunt.
+      Libero voluptatem officia aperiam voluptates deserunt eius. Doloremque
+      quam cupiditate laboriosam ut ea vitae! Tempora sit nulla saepe sequi
+      explicabo architecto accusamus, atque temporibus beatae, impedit voluptate
+      sint nobis numquam quasi asperiores recusandae eum. Voluptas quis culpa
+      provident aperiam omnis dolorum tenetur molestias! Distinctio minus illo
+      ullam fuga enim est tenetur commodi necessitatibus in iste eius
+      repellendus et delectus alias, sed iure veritatis illum omnis, sequi
+      aperiam porro, velit qui ab unde? Illo perspiciatis aliquid voluptatem.
+      Laudantium inventore mollitia ratione laborum deleniti, modi ipsa amet
+      laboriosam, illum cumque id dolorem, itaque voluptates debitis earum unde.
+      Ad nisi sapiente asperiores animi sit tempora? At vero nemo obcaecati
+      ducimus quasi nobis error recusandae illo quos earum. Quidem pariatur
+      reprehenderit, quisquam nesciunt optio aut sunt suscipit tempora veniam
+      sapiente odit ut ratione quod facilis voluptatum. Quo blanditiis mollitia
+      excepturi iure quam voluptate consectetur, ad quasi necessitatibus
+      perferendis doloribus maiores est rem vel ullam nostrum iusto velit
+      dignissimos cupiditate veritatis consequatur, veniam libero ex ut!
+      Perspiciatis autem ut nobis, vero, voluptatem veritatis expedita repellat
+      nam quidem inventore possimus! Soluta, veritatis non? Recusandae
+      voluptates aspernatur similique cupiditate dolore expedita quidem eaque
+      non!
+    </p>
+    by: <span id="sign"></span>
+    <script>
+      alert("This is a test");
+
+      //   var name = prompt("Hey user what is your name", "abc"); //default value as 2nd parameter   //if user cancelled the prompt window then returns null.
+      var name = prompt("Hey user what is your name");
+      alert("Welcome " + name);
+      let sign = document.getElementById("sign");
+      sign.innerText = name;
+
+      //   let c = confirm("Are you sure you want to leave this test");
+      //   if (c) {
+      //     window.open("", "_self").close();
+      //   }
+
+      if (confirm("Are you sure you want to close this window?")) {
+        window.close();
+      }
+    </script>
+  </body>
+</html>
