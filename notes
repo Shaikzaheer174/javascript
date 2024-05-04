@@ -234,3 +234,19 @@ EX: let btn = document.getElementById("b1)
 3. using addEventListener() method in JS
 EX: let btn = document.getElementById("b1)
     btn.addEventListener(eventName, function/anonymous fun)
+
+
+## settimeout and settimeinterval() functions
+
+var a = setTimeout(
+        function (name) {
+          alert("Hellooo! " + name);
+          console.log("Hellooo! after timeout");
+        },
+        5000,
+        "zaheer"
+      );
+
+a stores the id of the function
+and we cancel the function execution without executing after a particular time by using
+clearInterval(a)

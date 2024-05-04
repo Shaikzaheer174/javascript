@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>time out and interval ()</title>
+  </head>
+  <body>
+    <h1>## set timeout() and set timeinterval() functions</h1>
+
+    <script>
+      // set timeout
+      /*
+       * for any function after a particular time if we need to run we use set timeout  -- set timeout() takes 2 arguments
+       * 1. the function to be called
+       * 2. time after which the function should be called
+       */
+      setTimeout(
+        function (name) {
+          alert("Hellooo! " + name);
+          console.log("Hellooo! after timeout");
+        },
+        5000,
+        "zaheer"
+      );
+      console.log("hello world");
+
+      //   setinterval means that the function called every time after the given time
+      var counter = 1;
+      setInterval(count, 2000);
+
+      function count() {
+        alert("the counter is " + counter);
+        counter++;
+      }
+
+      //to stop the counter AT particularcount refer the below function
+      // let a = setInterval(count, 2000);
+      // function count() {
+      //   alert("the counter is " + counter);
+      //   counter++;
+      //   if (counter > 10) {
+      //     clearInterval(a);
+      //   }
+      // }
+
+      
+    </script>
+  </body>
+</html>
