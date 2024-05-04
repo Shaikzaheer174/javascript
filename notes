@@ -185,3 +185,52 @@ add/change styles in javascript
 1. alert() - to show message to the user
 2. prompt() - to take some input from the user
 3. confirm() - to get confirmation from the user.
+
+## Events
+1. what is event and types of events
+2. what is event handler
+3. ways to handle events.
+
+# Event:
+Event is nothing but an action. 
+in webpage also what ever user do is everything is an event.
+
+# who generates an events
+user -> keypress, scroll, focus, etc...
+system -> load, error, abort, etc...
+
+# types of user generated events:
+browser specific events ->  scrollup/down, resize browser.
+DOM/ web page specific events -> click, focus, hover.
+
+event listeners and event handlers
+#event listener is a function that listens for a specific event and triggers another function(the event handler)when the event occurs.
+#event handler is a function that handles (or responds to) a specific event when triggered by an event listener. or event handler is a function we write to run when an event happens.
+ 
+types of events:
+# mouse events:
+click, double click, mouseover, mouseout, mouse move
+
+# keyboard events:
+key down, key up, key press
+
+# focus events:
+focus, blur, focusin, focusou
+
+# form events:
+submit, reset, change
+
+
+### 3 ways to handle events.
+1. inline event handlers(using the event attribute in html)
+EX: <button onclick="js code">
+
+# for all the above events if we add on at starting then its called event listeners
+
+2. using event properties in JS.
+EX: let btn = document.getElementById("b1)
+    btn.onclick = function name/anonymous function
+
+3. using addEventListener() method in JS
+EX: let btn = document.getElementById("b1)
+    btn.addEventListener(eventName, function/anonymous fun)

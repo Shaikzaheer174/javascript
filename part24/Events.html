@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!--inline event handler-->
+    <button onclick="document.body.style.backgroundColor='green'">
+      change Background
+    </button>
+    <button onclick="closeKaro()">click to close</button>
+
+    <!-- using event properties in JS -->
+    <button id="btn">change color 2</button>
+
+    <br />
+    <button id="btn3">change colour 3</button>
+
+    <br />
+    <input type="text" name="" id="fullName" placeholder="Enter name" />
+
+    <br />
+    <br />
+    <br />
+    <button id="changeBG" onclick="changeBG(event)">
+      Change Background colour
+    </button>
+
+    <script>
+      function closeKaro() {
+        window.close();
+      }
+
+      function changeBackgroundColor(event) {
+        // console.log(this); //<button id="btn">change color 2</button>
+        console.log(event); //to check the event
+        document.body.style.backgroundColor = "red";
+      }
+
+      btn = document.getElementById("btn");
+      btn.onclick = changeBackgroundColor; //if we give paranthesis after function name it executes automatically.
+
+      //   using addEventListener() method
+      btn3 = document.getElementById("btn3");
+      btn3.addEventListener("click", changeBackgroundColor);
+
+      fn = document.getElementById("fullName");
+      fn.addEventListener("keyup", eventEx);
+      function eventEx(eventu) {
+        console.log(eventu);
+        if (eventu.key == "T") {
+          alert("should not enter T");
+        }
+      }
+
+      //   bg change
+      function changeBG(event) {
+        var letters = "0123456789ABCDEF";
+        var color = "#"; //to take hexadecimal color we use # and 6 random character from the above letters string
+        for (var i = 0; i < 6; i++) {
+          var r = Math.floor(Math.random() * 16); //math.random dgenerates one number bw 0 to 1 that is assume 0.6 then we are multiplying it with 16 so assume like 3.6 somthing we get then with the helpof floor() we remove decimal number. and integer number will be get concatinated
+          color = color + letters[r];
+        }
+        document.body.style.background = color;
+      }
+    </script>
+  </body>
+</html>
