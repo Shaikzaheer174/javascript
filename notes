@@ -255,3 +255,6 @@ clearInterval(a)
 ## map() method:
 - it is related to arrays method. 
 - it is used for modify already existing array data and create's a new array with modified data we can use map() method.
+
+## filter() method:
+- 

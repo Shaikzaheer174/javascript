@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filters() method</title>
+  </head>
+  <body>
+    <script>
+      // filter() method is related to arrays method
+      // used to filter arrays data --> filter means based on some condition the satisfied data to be filtered.
+      // we can use for loop or for in but filter is a easy way to filter the arrays data
+
+      let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20];
+
+      let evenNumbers = numbers.filter(function (element) { //if we use map it returns true or false
+        return element % 2 == 0;
+      });
+
+      console.log(numbers);
+      console.log(evenNumbers);
+    </script>
+  </body>
+</html>
