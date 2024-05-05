@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // find() --> it is a callback function and returns the first element of an array for which callback function returns true.
+      let places = [
+        "hyderabad",
+        "delhi",
+        "bangalore",
+        "mangalore",
+        "vijayawada",
+        "mumbai",
+      ];
+
+      let favPlace = places.find(function (ele, index, array) {
+        return ele.startsWith("h");
+      });
+      console.log(favPlace); //hyderabad
+
+      // where filter will return all the elements which satify the condition
+      let favPalces = places.filter(function (element) {
+        return element.startsWith("m");
+      });
+      console.log(favPalces); //['mangalore', 'mumbai']
+
+      // some() -->it returns a boolean value if the condition is satisfies. it is similar to find() except find returns a satified element but it returns a boolean value.
+      let hasFavPlace = places.some(function (ele, index, array) {
+        return ele.startsWith("h");
+      });
+      console.log(hasFavPlace); //true
+
+      // every() -->if every element of an array satisfies the condition then it returns true else false.
+      // Ex:
+      let marks = [23, 24, 25, 21, 20, 22];
+      let status = marks.every(function (mark) {
+        return mark > 18;
+      });
+      console.log(status); //true  , where some return for only one element where every() checks for every element of an  array.
+    </script>
+  </body>
+</html>

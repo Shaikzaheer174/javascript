@@ -266,3 +266,10 @@ clearInterval(a)
 - array.reduce(function(acc, elem, index, array){}, 8)
 - this method returns a single value.
 // reduce method will iterate over the array and calls the function for each element and compares with accumulator and so on..
+
+
+## array methods: 
+- find() method
+- some() method
+- every() method
+these are callback functions
