@@ -250,3 +250,8 @@ var a = setTimeout(
 a stores the id of the function
 and we cancel the function execution without executing after a particular time by using
 clearInterval(a)
+
+
+## map() method:
+- it is related to arrays method. 
+- it is used for modify already existing array data and create's a new array with modified data we can use map() method.

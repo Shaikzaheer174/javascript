@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let birthDays = [1998, 2000, 2002, 2005, 2010, 2015, 2020];
+      
+      let ages = birthDays.map(function (element) { // the function can have 3 arguments (element, index, array)
+        let age = 2024 - element;
+        return age;
+      });
+
+      console.table(birthDays); //[1998, 2000, 2002, 2005, 2010, 2015, 2020]
+      console.table(ages); //[26, 24, 22, 19, 14, 9, 4]
+    </script>
+  </body>
+</html>
