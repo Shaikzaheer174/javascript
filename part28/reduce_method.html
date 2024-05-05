@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reduce()</title>
+  </head>
+  <body>
+    <script>
+      let list = [121, 42345, 6435, 6868, 686, 8, 6, 2423432, 546]; //find the max number
+      let maximumValue = list.reduce(function (acc, elem) {//function(acc, elem, index, array)    
+        if (acc > elem) {
+          return acc;
+        } else {
+          return elem;
+        }
+      }, list[0]); //list[0] is a accumulator value.
+
+      console.log(maximumValue); //2423432
+
+
+      // sum of array elements
+      let numbers = [7, 90, 8];
+      let sum = numbers.reduce(function (acc, elem) {
+        return acc + elem;
+      }, 0);
+
+      //1st iteration: acc= 0 ele = 7
+      // returns 7
+      // 2nd iteration: acc= 7 and ele = 90
+      // returns 97 and ele =8
+      // 3rd iteration: acc = 105
+      // retuns 105
+
+      console.log(sum);//105
+    </script>
+  </body>
+</html>

@@ -257,4 +257,12 @@ clearInterval(a)
 - it is used for modify already existing array data and create's a new array with modified data we can use map() method.
 
 ## filter() method:
-- 
+
+## reduce() method:
+- it is also used for arrays.
+- array.reduce(function, accumulator or default value)
+- function can take 4 arguments.
+- function(accumulator value, element, index, array)  //accumulator is a first argument.
+- array.reduce(function(acc, elem, index, array){}, 8)
+- this method returns a single value.
+// reduce method will iterate over the array and calls the function for each element and compares with accumulator and so on..
