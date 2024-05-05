@@ -273,3 +273,5 @@ clearInterval(a)
 - some() method
 - every() method
 these are callback functions
+
+## spread operator:
