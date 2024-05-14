@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback functions</title>
+  </head>
+  <body>
+    <h1>callback functions Example</h1>
+    <script>
+      //callback function is a function that is passing as a an argument to the another function
+
+      // Ex1
+      function test(a) {
+        console.log(a); //ƒ () { console.log(" Callback function"); }
+        a(); //Callback function
+      }
+
+      test(function () {
+        console.log(" Callback function");
+      });
+
+      // Ex2
+      function one(parameter1) {
+        console.log("first function..");
+        parameter1(); //Callback function
+      }
+
+      function two() {
+        console.log("second function");
+      }
+      one(two);
+
+      // Ex3:
+      function add(parameter1, parameter2) {
+        console.log(parameter1 + parameter2);
+      }
+
+      function multiply(parameter1, parameter2) {
+        console.log(parameter1 * parameter2);
+      }
+
+      function calculator(parameter1, parameter2, performWhat) {
+        performWhat(parameter1, parameter2);
+      }
+
+      calculator(1, 2, add); //3
+      calculator(1, 2, multiply); //2
+
+      //   Ex4:
+      arr = [1, 2, 3, 4];
+      let result = arr.map(function (element) {
+        return element * element;
+      });
+      console.log(result); //[1, 4, 9, 16]
+    </script>
+  </body>
+</html>
