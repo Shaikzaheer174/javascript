@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>higherOrderFunctions</title>
+  </head>
+  <body>
+    <script>
+      // Higher order functions is a function that receives another function as argument or returns another function or both.
+      // Example: receiving another function as argument
+      function first(fun) {
+        fun();
+      }
+      function second() {
+        console.log("This is a second function");
+      }
+
+      first(second); //This is a second function
+
+      // advantage of higher order functions
+      // without higher order functions:
+      var arr = [5, 10, 20, 30, 40, 50];
+
+      function square(arr) {
+        squares = [];
+        for (ele of arr) {
+          let res = ele * ele;
+          squares.push(res);
+        }
+        console.log(squares); // [25, 100, 400, 900, 1600, 2500]
+        return squares;
+      }
+
+      function cube(arr) {
+        squares = [];
+        for (ele of arr) {
+          let res = ele * ele * ele;
+          squares.push(res);
+        }
+        console.log(squares);
+        return squares;
+      }
+
+      let data = square(arr);
+      console.log(data); // [25, 100, 400, 900, 1600, 2500]
+
+      console.log(" ------------------------------------------- ");
+
+      // with higher order functions:
+      function square1(num) {
+        return num * num;
+      }
+
+      function cube1(num) {
+        return num * num * num;
+      }
+
+      function increment(num) {
+        return num + 1;
+      }
+
+      function performOperation(arr, operation) {
+        let result = [];
+        for (ele of arr) {
+          result.push(operation(ele));
+        }
+        return result;
+      }
+
+      let x = performOperation(arr, square1);
+      console.log(x); //[25, 100, 400, 900, 1600, 2500]
+
+      let y = performOperation(arr, cube1);
+      console.log(y); //[125, 1000, 8000, 27000, 64000, 125000]
+
+      let z = performOperation(arr, increment);
+      console.log(z); //[6, 11, 21, 31, 41, 51]
+
+
+      
+      // Example of returning a Function
+      function one() {
+        return two;
+      }
+
+      function two() {
+        console.log("this is 2nd function");
+      }
+
+      let toCallTwo = one(); //or one()();
+      toCallTwo(); //this is 2nd function
+
+      one()(); // without storing the returned function in a variable we can call that function    //this is 2nd function
+
+      // another example:
+      function one1() {
+        // return () => {console.log("this is a arrow function")};
+        return function () {console.log("anonymous function")};
+      }
+
+      one1()(); //this is a arrow function
+
+      let s = one1();
+      console.log(s);
+      s();//anonymous function
+    </script>
+  </body>
+</html>
