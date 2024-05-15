@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure Example</title>
+  </head>
+  <body>
+    <input type="button" value="Click" onclick="updateCount()" />
+    <p id="count">Clicked: 0</p>
+
+    <script>
+      console.log("closure example");
+      // closure is --> if we  decalre any variables in a function, after running that function if we can use those variables outside of that function then it is called as closure.
+
+      // know about the scope:
+      function outer() {
+        var x = 10;
+
+        function inner() {
+          var y = 10;
+          console.log(x);
+          return x;
+        }
+
+        // inner(); //10
+        return inner;
+      }
+
+      // console.log(x); // x is not defined
+      let innerFunction = outer();
+      console.log(innerFunction); //ƒ inner() {var y = 10;  console.log(x);}
+      innerFunction(); //10  now we got x value.
+
+      // therefore, Accessing variables of a function even its execution completes or out of its scope.
+
+      // another example:
+      function out(num1) {
+        let x = 10;
+        function inn(num2) {
+          console.log(num1 + num2 + x);
+        }
+        return inn;
+      }
+
+      let inn = out(10);
+      inn(10); //30
+
+      //another Ex:
+      // let count = 0;
+      // function updateCount() {
+      //   let p = document.getElementById("count");
+      //   count = count + 1;
+      //   p.innerText = `Clicked: ${count}`;
+      // }
+
+      function updateCountSecure() {
+        let count = 0;
+
+        function innerFun() {
+          count = count + 1;
+          console.log(count);
+          let p = document.getElementById("count");
+          p.innerText = `Clicked: ${count}`;
+        }
+        return innerFun;
+      }
+
+      let updateCount = updateCountSecure();
+
+      let counter2 = updateCountSecure();
+
+      counter2(); //1
+      counter2(); //2
+
+      let counter3 = updateCountSecure();
+      counter3(); //1
+      counter3(); //2
+
+      // main advantage ye hai ki kiska value usko starting se initialize hotha. kitne intances create karo.
+    </script>
+  </body>
+</html>
