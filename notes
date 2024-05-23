@@ -286,4 +286,7 @@ these are callback functions
 ## closure
 
 ## this keyword
-- function is differnt and object is differnt that is if we define a function in an object then that is called as method.
+- function is different and method is different that is if we define a function in an object then that is called as method.
+
+
+## call,apply,bind methods 

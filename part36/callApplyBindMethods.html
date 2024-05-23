@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // to understand about these methods we need to understand about this keyword.
+      // these three methods are used to manipulate the this keyword.
+      // that is this keyword represents the object right, so to which object it should represent instead of the object we can change it so that it represents some other object which we'll be specify.
+      // using these methods we can achieve it.
+
+      var salary = 10000;
+
+      function getSalary(a) {
+        console.log(this.salary);
+        console.log(a);
+      }
+
+      getSalary("regular function"); //10000
+
+      employee = {
+        name: "employee",
+        salary: 20000,
+      };
+
+      employee2 = {
+        name: "employee2",
+        salary: 30000,
+      };
+
+      employee3 = {
+        name: "employee3",
+        salary: 40000,
+      };
+
+      getSalary.call(employee, "call method"); //20000,  therefore now it refers employee object instead of global object.
+
+      getSalary.call(employee2, "call method");
+
+      //getSalary.apply(employee, 'apply') //CreateListFromArrayLike called on non-object   therefore we need pass the args in the form of array
+
+      getSalary.apply(employee, ["apply method"]);
+
+      //getSalary.bind(employee, "bind method"); // it wont be called because it returns a function so we need to store it some variable and then we need to call it.
+
+      let bindMethod = getSalary.bind(employee, "bind method");
+      bindMethod();
+
+      // another Example:
+      let myObject = {
+        salary: 100000,
+        getSalary: function (a, b) {
+          console.log(this.salary);
+          console.log(a, ", ", b);
+        },
+        greet: function (wish) {
+          console.log(this.name, wish);
+        },
+      };
+
+      myObject.getSalary(1, 2);
+
+      myObject.getSalary.call(employee, 1, 2);
+      myObject.getSalary.apply(employee2, [1, 2]);
+      let myObj3 = myObject.getSalary.bind(employee3, 1, 2);
+      myObj3();
+
+      // another Example:
+      let a = myObject.greet.bind(employee, "hello world");
+      a();
+    </script>
+  </body>
+</html>
