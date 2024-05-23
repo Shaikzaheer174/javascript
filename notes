@@ -284,3 +284,6 @@ these are callback functions
 ## higher Order Functions
 
 ## closure
+
+## this keyword
+- function is differnt and object is differnt that is if we define a function in an object then that is called as method.

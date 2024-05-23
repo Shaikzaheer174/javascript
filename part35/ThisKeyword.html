@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This keyword</title>
+  </head>
+  <body>
+    <!-- //value of this keyword inside event handler: -->
+    <input
+      type="button"
+      name="Click"
+      id=""
+      value="click me"
+      onclick="console.log(this); console.log(this.value); this.style.background='green'"
+    />
+
+    <script>
+      "use strict";
+      //this is a predefined keyword in js it represents a object. it represents object based on place and scope we use the this keyword.
+
+      /**
+       * Value of this keyword outside a function/object
+       * value of this keyword inside a regular function
+       * value of this keyword inside a method
+       * value of this keyword inside event handler
+       * value of this keyword inside a function in strict mode
+       * */
+
+      //console.log(this); //window object  --> global object.
+      var x = 10;
+
+      //   console.log(window.x); //10
+      //   console.log(this.x); //10
+      //   console.log(x); //10
+
+      function add() {
+        console.log("d");
+      }
+
+      var obj = {
+        name: "s",
+      };
+
+      //console.log(this.add);
+      //console.log(this.obj); //therefore jo bhi hum global scope me define karte hai na this.voh use kare tho voh window object me aatha hai.
+
+      // value of this keyword inside a regular function:
+      function regularFun() {
+        console.log(this); //window object
+        console.log(window.x); //10
+      }
+
+      //regularFun(); // therefore normal function me bhi this bolthe so window obj ko he represent karta hain.
+
+      // value of this keyword inside a method:
+      // an objects method if we use a this keyword then it represents ?
+      // Example:
+      var movie = {
+        name: "happy days",
+        getName: function () {
+          console.log(this);
+        },
+      };
+
+      movie.getName(); //ek object me hum this use karetho voh vohi object ko represent karte hai. so yaha movie object print hoga console me.
+
+      //value of this keyword inside event handler:
+      // written in HTML code
+
+      // value of this keyword inside a function in strict mode
+      //xdd = 10; //Uncaught ReferenceError: xdd is not defined  while using strict mode because we haven't use let, var etc..
+      function testing() {
+        console.log(this);
+      }
+
+      testing(); // we're getting undefined
+    </script>
+  </body>
+</html>
