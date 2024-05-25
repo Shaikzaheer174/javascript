@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // string methods:
+      let str1 = "this is javascript"; // primitive datatype string
+      console.log(str1);
+
+      let str2 = new String("js"); // string object
+      console.log(str2);
+
+      console.log(str1.charAt(8)); // j  --> position of the character.
+
+      console.log(str1.indexOf("j")); //8
+
+      console.log(str1.indexOf("javascript")); // 8
+      console.log(str1.indexOf("javascripts")); // -1  --> the string is not available so -1
+
+      console.log(str1.indexOf("a")); //9
+      console.log(str1.lastIndexOf("a")); //11
+
+      console.log(str1.toUpperCase()); //THIS IS JAVASCRIPT
+      console.log(str1.toLowerCase()); //this is javascript
+
+      console.log(str1.concat(" programming")); //this is javascript programming
+
+      console.log(str1.length); //18
+
+      let str3 = "         javascript     ";
+      console.log(str3.trim()); //javascript
+      console.log(str3.trimEnd()); //         javascript
+
+      console.log(str1.split()); //['this is javascript']
+      console.log(str1.split("a")); // ['this is j', 'v', 'script']   // a  kaha aatha hai ki vaha str ko cut karta hai, aur a ko include nahi karte hai.
+
+      let name = "Mr. john Smith";
+      console.log(name.split("")); // ['Mr.', 'john', 'Smith']
+      console.log(name.split("")); // ['M', 'r', '.', ' ', 'j', 'o', 'h', 'n', ' ', 'S', 'm', 'i', 't', 'h']
+
+      console.log(str1.startsWith("t")); //true
+      console.log(str1.endsWith("t")); //true
+      console.log(str1.endsWith("z")); //false
+
+      console.log(str1.slice(1, 17)); // his is javascrip
+
+      console.log(str1.slice(4)); // is javascript
+      console.log(str1.slice(-1)); //t
+      console.log(str1.slice(-3, -1)); //ip
+      console.log(str1.slice(1, -2)); //his is javascri
+
+      console.log(str1.substring(1, 4)); //his  // it is also like slice but it wont take -ve index
+
+      console.log(str1.substr(1, 5)); //his i //from 1 index i need 5 characters.  2nd arg is character size.
+
+      console.log(str1.includes("t")); //true
+      console.log(str1.includes("z")); //false
+      console.log(str1.includes("java", 8)); // 8 is a index number
+
+      console.log(str1.charCodeAt("t")); //116  //ascii code
+
+      console.log(str1.repeat(4)); //this is javascriptthis is javascriptthis is javascriptthis is javascript
+
+      console.log(str1.replace("javascript", "java")); //this is java
+      console.log(str1.replace(/a/g, "java")); //this is jjavavjavascript
+    </script>
+  </body>
+</html>
