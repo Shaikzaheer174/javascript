@@ -294,3 +294,19 @@ these are callback functions
 ## optional chaining 
 
 ## date object
+
+## math object
+- sign()
+- abs()
+- sqrt()
+- pow()
+- max()
+- min()
+- round()
+- ceil()
+- floor()
+- trunc()
+- random()
+- exp()
+- log2()
+- log10()
