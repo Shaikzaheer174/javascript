@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">Optional chaining</h1>
+
+    <script>
+      // so optional chaininh matlab agar koi value undefined or null aaye tho voh further execute nahi karta check bhi nahi karta
+      //  because ek object lere uska kuch prop access karni chahre agar voh object hi nahi rehta tho error aajatha hai null aur null object nahi hotha hai aur property access nahi karte right to avoid we use optional chaining.
+
+      // Ex:
+      let person = {
+        id: 1,
+        email: "john@example.com",
+        personalInfo: {
+          name: "John",
+          age: 26,
+          mobileNumber: 1234567890,
+          address: {
+            Hno: "1-2-3/1",
+            area: "ameerpet",
+            line: "5",
+            pincode: 507111,
+            city: "hyderabad",
+            stat: "Ts",
+          },
+        },
+      };
+
+      // multi level objects reh jab use hotha hai optional chaining.
+
+      // console.log(person.personalInfo.mobileNumber); //1234567890
+      // console.log(person.personalInfo.ddg); // undefined
+      // console.log(person.personalInfo.ddg.kjj); // Cannot read properties of undefined (reading 'kjj')
+      // console.log("execute nahi hotha because upper error");
+
+      // console.log(person.personalInfo.ddg?.kjj); //same above code but no error message.     // what exactly happening here means, person.personalInfo obj me ddg name ka object hai ya nahi check karta hai agar hai tho usne se kjj prop return karta hai agar nahi rehta tho undefined aatha hai. aur uske baad ka lines bhi execute hotha hai.
+      // console.log("hello");
+
+      // another Example:
+      let h1 = document.getElementById("heading").innerText;
+      console.log(h1);
+
+      //let h2 = document.getElementById("headingd").innerText; // Cannot read properties of null (reading 'innerText')   // null.innertext therefore null obje anahi aur usme innertext prop nhi hai
+      // null, underfined hue jab   ? further nahi read hotha.   simply return karta hai undefined.
+      //let h3 = document.getElementById("headingd")?.innerText; // undefined
+      //console.log(h2);
+      //console.log(h3);
+    </script>
+  </body>
+</html>
