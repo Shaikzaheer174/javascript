@@ -342,3 +342,5 @@ replace()
 - navigator
 
 ## window.open()  and window.close() methods
+
+## moveTo() and moveBy() and reSizeTo() and reSizeBy() methods

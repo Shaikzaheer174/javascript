@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="openWindow()">open</button>
+    <br />
+    <button onclick="closeWindow()">close</button>
+    <br />
+    <button onclick="moveTofunc()">move to</button>
+    <br />
+    <button onclick="moveByFunc()">move by</button>
+    <br />
+    <button onclick="resizeto()">resize to</button>
+    <br />
+    <button onclick="resizeby()">resize by</button>
+
+    <script>
+      var ref;
+
+      function openWindow() {
+        ref = window.open(
+          "demo.html",
+          "_blank",
+          "width=600px,height=500px,left=100px,top=100px"
+        );
+        console.log(ref);
+      }
+
+      function closeWindow() {
+        ref.close();
+      }
+
+      function moveTofunc() {
+        ref.moveTo(2000, 100);
+      }
+
+      function moveByFunc() {
+        ref.moveBy(800, 100); //already we mentioned specifications right for that it add 800 left and 100 top
+      }
+
+      function resizeto() {
+        ref.resizeTo(100, 200); //width and height
+      }
+
+      function resizeby() {
+        ref.resizeTo(500, 500); //width and height
+      }
+    </script>
+  </body>
+</html>
