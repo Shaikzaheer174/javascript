@@ -346,3 +346,19 @@ replace()
 ## moveTo() and moveBy() and reSizeTo() and reSizeBy() methods
 
 ## asynchronous javascript
+
+## AJAX
+- AJAX - Asynchronous javascript and XML :)
+- AJAX helps in fetching data asynchronously from remote webserver [helps to display the data dynamically in our web page.]
+- data loaded by ajax call is done by asynchronously without page refresh.
+- web server will send response which contains data that we have requested.
+- data can be of any formats like JSON,XML.
+- initially servers used to send data in XML format.
+
+- in javascript, we have to use XMLHttpRequest object to make the AJAX call to exchange data from webserver.
+- AJAX request can be send to server in with 3 steps:
+1. create XMLHttpRequest object
+    EX: let xhr = new XMLHttpRequest();
+2. create request with that object open() method
+    EX: syntax: open(method[post/get], url, async[true/false], username, password); //async if you give as true then below code will get executed else holds till reponse we receive. and username and password are optional based on endpoint.
+3. send the request using send() method.

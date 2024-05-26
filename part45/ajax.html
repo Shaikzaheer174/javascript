@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      button {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        color: white;
+        background-color: rgb(167, 170, 91);
+        padding: 10px;
+        border: 2px solid rgb(49, 93, 122);
+        border-radius: 1px;
+        font-family: cursive;
+        font-size: 16px;
+        width: 200px;
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AJAX - Asynchronous javascript and XML</h1>
+    <br />
+    <button id="btn">Get data</button>
+    <div id="data"></div>
+    <script>
+      console.log("AJAX -  Asynchronous javascript and XML");
+
+      btn = document.getElementById("btn");
+      displayData = document.getElementById("data");
+
+      btn.addEventListener("click", loadData);
+
+      function loadData() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "demo.txt", true);
+
+        xhr.send();
+
+        xhr.onprogress = function () {
+          displayData.innerText = "loading data...";
+        };
+
+        xhr.onload = function () {
+          displayData.innerText = xhr.responseText;
+        };
+      }
+    </script>
+  </body>
+</html>
