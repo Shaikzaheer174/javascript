@@ -329,3 +329,15 @@ includes()
 charCodeAt()
 repeat() 
 replace()
+
+##  wuindow object
+- document
+- innerWidth
+- outerWidth
+- innerHeight
+- outerHeight
+- location
+- closed
+- name
+- navigator
+
