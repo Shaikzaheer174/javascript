@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Asynchronous JS</h1>
+    <script>
+      //  in js execution of done is done in line by line. which means synchronous programming.
+      // console.log("this is first line...");
+      // alert("hello!");
+      // console.log("this is second line...");
+
+      // here the test() call is executed then only console will log the second line.
+      // test();
+      // console.log("this is second line...");
+      // function test() {
+      //   console.log("this is first line");
+      // }
+
+      // this is also a function but it is asynchronous.
+      setTimeout(function () {
+        console.log("this is first line..."); // setTimeout is an example of asynchronous programming. instead of waiting till the time end the next statements will get executed till the time is up.
+      }, 2000);
+      console.log("this is second line...");
+    </script>
+  </body>
+</html>
