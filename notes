@@ -341,3 +341,4 @@ replace()
 - name
 - navigator
 
+## window.open()  and window.close() methods

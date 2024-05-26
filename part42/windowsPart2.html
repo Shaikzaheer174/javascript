@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="click" onclick="navigate()" />
+
+    <button onclick="openWindow()">open</button>
+    <br />
+    <button onclick="closeWindow()">close</button>
+    <script>
+      // open() --> syntax: window.open(url, name/target, specifications)  it take three optional parameters.
+      /**
+       * url is path, name is the name of the window, if you dont specify we can also have a target which take few values
+       * such as _blank, _self, _parent, _top.
+       *  and specification is such as width and height, top and left, resizable and scrollable
+       *
+       **/
+      function navigate() {
+        // window.open(); //it opens a new tab
+        // window.open("", "", "width=600px,height=500px,left=100px,top=100px"); //it opens a new window with specified sizes.
+        // window.open("", "_self", "width=600px,height=500px,left=100px,top=100px"); //it opens a in same window.
+        // window.open('https://zaheerintrovert.blogspot.com/') //it redirects to https://zaheerintrovert.blogspot.com in new tab
+      }
+
+      var ref;
+
+      function openWindow() {
+        ref = window.open(
+          "https://zaheerintrovert.blogspot.com/",
+          "_blank",
+          "width=600px,height=500px,left=100px,top=100px"
+        );
+        console.log(ref);
+      }
+
+      function closeWindow() {
+        ref.close();
+      }
+    </script>
+  </body>
+</html>
