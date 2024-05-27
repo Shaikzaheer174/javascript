@@ -362,3 +362,40 @@ replace()
 2. create request with that object open() method
     EX: syntax: open(method[post/get], url, async[true/false], username, password); //async if you give as true then below code will get executed else holds till reponse we receive. and username and password are optional based on endpoint.
 3. send the request using send() method.
+
+<!-- methods -->
+- With the help of Ajax, instead of reloading page, only required portion we can update it.
+
+- send() method, if we won't pass parameters then it takes GET method. 
+
+- send(string), sends the request to the server used for POST requests.
+
+- setRequestHeader() -> adds a label/value pairs of the headers to be sent.
+
+- abort() -> cancel the current request.
+
+- getAllresponseHeaders() -> returns header information.
+
+- getResponseHeaders() -> returns specific header information.
+
+<!-- porperties -->
+- onLoad --> when the request is complete and the response is fully downloaded
+
+- onReadyStateChange --> defines a function to be called when the readystate property changes.
+
+- onProgress --> triggers periodically while the response is being downloaded, reports how much has been downloaded.
+
+- readyState --> holds the status of the XMLHttpRequest.
+0. request not initialized
+1. server connection established
+2. request received
+3. processing request
+4. request finished and response is ready.
+
+- responseText --> returns the response data as a string
+
+- responseXML --> returns the response data as XML data.
+
+- status --> returns the status number of the request 200 ok, 404 not found.
+
+- statusText --> returns teh status text (ok or not found)

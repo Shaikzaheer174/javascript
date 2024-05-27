@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      button {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        color: white;
+        background-color: rgb(46, 76, 115);
+        padding: 10px;
+        border: 2px solid rgb(49, 93, 122);
+        border-radius: 5px;
+        font-family: cursive;
+        font-size: 16px;
+        width: 200px;
+        margin-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Get data</button>
+    <div id="data"></div>
+
+    <script>
+      btn = document.getElementById("btn");
+      displayData = document.getElementById("data");
+      btn.addEventListener("click", loadData);
+
+      function loadData() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "data.json", true); //
+
+        xhr.send();
+
+        xhr.onprogress = function () {
+          displayData.innerText = "loading data...";
+        };
+
+        xhr.onload = function () {
+          if (xhr.status == 200) {
+            let result = xhr.responseText;
+
+            // converting string object to JSON object.
+            result = JSON.parse(result);
+
+            let str = `<table border= "2"><tr>`;
+            for (key in result) {
+              str = str + ` <th>${key}</th>`;
+            }
+
+            str = str + `</tr><tr>`;
+
+            for (key in result) {
+              str = str + `<td>${result[key]}</td>`;
+            }
+
+            str = str + `</tr></table>`;
+
+            displayData.innerHTML = str;
+          } else {
+            displayData.innerHTML = "Page not found";
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
