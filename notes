@@ -399,3 +399,5 @@ replace()
 - status --> returns the status number of the request 200 ok, 404 not found.
 
 - statusText --> returns teh status text (ok or not found)
+
+## callback hell 

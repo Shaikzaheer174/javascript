@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("call back hell");
+
+      //requirement:  5 steps need to be done.
+      // 1,2,3 steps takes 2000ms
+      // 4,5 steps takes 1000ms
+      function step1() {
+        setTimeout(function () {
+          console.log("step1...");
+          setTimeout(function () {
+            console.log("step2...");
+            setTimeout(function () {
+              console.log("step3...");
+              setTimeout(function () {
+                console.log("step4...");
+                setTimeout(function () {
+                  console.log("step5...");
+                }, 1000);
+              }, 1000);
+            }, 2000);
+          }, 2000);
+        }, 2000);
+      }
+
+      step1();
+
+      // so here callback hell means the structure will not get understand due to confusion suppose if we have more than 10 settimeout() then we may get confused so its called callback hell,
+      // and it is difficult to read and debug.
+      // so to avoid or to over come these promises came into picture.
+    </script>
+  </body>
+</html>
