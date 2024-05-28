@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <button id="btn">Get data</button>
+    <div id="data"></div>
+
+    <script>
+      // promises:
+      /**
+       * promise is an object in JS,
+       * Ex: let promise = new Promise(function(resolve, reject) {});
+       * promise object takes a callback function as argument.
+       * this promise object will be retuning some data either success data or error information.
+       * we need to pass two more callbacks functions as parameters for the callback function which we are passing as the parameter to the promise object.
+       * EX: let promise = new Promise(function(resolve, reject) {});
+       * states of promise
+       * 1.  pending
+       * 2. fulfilled
+       * 3. rejected
+       * when we created the promise object the state of the promise will be pending, and if its is success then it is fulfilled and if it is failed or on error then it is rejected state.
+       * and promise object also contains two more methods like then and catch.
+       * then is used to work with next methods after we are getting the response and catch is for working with error.
+       **/
+
+      // let promise = new Promise(function (resolve, reject) {
+      //   let bool = true;
+      //   if (bool) {
+      //     resolve("resolved ra babu");
+      //   } else {
+      //     reject("antha mere chesaru nanna...");
+      //   }
+      // });
+
+      // // console.log(promise);
+
+      // promise.then(function (data) {
+      //   console.log("aipayee.....", data);
+      // });
+
+      // promise.catch(function (errorVachindi) {
+      //   console.log(errorVachindi);
+      // });
+
+      // another example:
+      btn = document.getElementById("btn");
+      displayData = document.getElementById("data");
+
+      btn.onclick = function () {
+        let promise = new Promise(function (resolve, reject) {
+          let xhr = new XMLHttpRequest();
+          xhr.open("GET", "demo.txt", true);
+          xhr.send();
+          xhr.onload = function () {
+            if (xhr.status == 200) {
+              resolve(xhr.responseText);
+            } else {
+              reject("not found");
+            }
+          };
+        });
+
+        promise.then(function (result) {
+          console.log(result);
+          displayData.innerHTML = result;
+        });
+
+        promise.catch(function (error) {
+          console.log(error);
+        });
+      };
+    </script>
+  </body>
+</html>

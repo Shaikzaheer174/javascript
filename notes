@@ -401,3 +401,5 @@ replace()
 - statusText --> returns teh status text (ok or not found)
 
 ## callback hell 
+
+## promise 
