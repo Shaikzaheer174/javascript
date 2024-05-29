@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // async function test() {
+      //   let x = await (5 + 7);
+      //   console.log("inside a function");
+      //   return x;
+      // }
+
+      // let value = test();
+
+      // value.then(function (data) {
+      //   console.log(data);
+      // });
+      // console.log("outside a function");
+
+      // output:
+      // outside a function
+      // inside a function
+      // 12
+
+      // another Example: instead of using this way
+      // function test() {
+      //   let res = fetch("demo.txt");
+      //   res.then(function (data) {
+      //     data.text().then(function (output) {
+      //       console.log(output);
+      //     });
+      //   });
+      // }
+
+      //we can have this, await promise object nahi,balki direct response hi return karta hai. and we can avoid then().
+      async function test() {
+        let res = await fetch("demo.txt");
+        let finalResult = await res.text();
+        console.log(finalResult);
+      }
+      test();
+    </script>
+  </body>
+</html>
