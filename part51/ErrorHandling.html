@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ErrorHandling</title>
+  </head>
+  <body>
+    <h1>ErrorHandling - try and catch</h1>
+    <script>
+      //   console.log("ErrorHandling - 1");
+      //   console.log(ErrorHandling - 2);  // yaha per error aane se neche ka code execute nahi hua so we use try catch, see the below example.
+      //   console.log("ErrorHandling - 3");
+
+      try {
+        console.log("ErrorHandling - 1");
+        console.log(ErrorHandling - 2);
+        console.log("Error occured in above line");
+      } catch (error) {
+        console.log(error);
+        //console.log(error.type);// undefined
+        //console.log(error.name);// ReferenceError
+        console.log(error.message); // ErrorHandling is not defined
+      }
+
+      console.log("ErrorHandling - 3"); // it is executed
+
+      // throw:
+      // after some particular condition if we want to stop execution and use the throw keyword:
+      // Ex:
+      let x = 10;
+      if (x < 20) {
+        throw "x is less than 20";
+        console.log("error: x is less than 20");
+      }
+
+      console.log("error: x is less than 20"); //it wont get executed.
+    </script>
+  </body>
+</html>
