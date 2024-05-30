@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("destructuring...");
+      //destructuring is related to arrays and objects concept.
+
+      let arr = [100, 200, 300, 400];
+      //suppose you want to store the first element of the array to one of the variable then
+      //   let first = arr[0];
+      //   let second = arr[1];
+      //   let third = arr[2];
+
+      //so instead of storing, we can use shorthand method
+      let [first, second, third] = arr;
+      //console.log(first, second, third); //100,200,300
+      //   and if you dont want to the second element then
+      let [one, , three] = arr;
+
+      //  if you want to store the first element in one variable and rest all in another variable then we can use spread operator.
+      let [firstVal, ...rest] = arr;
+
+      let person = {
+        name: "John",
+        age: 36,
+        address: {
+          city: "hyd",
+          state: "TG",
+        },
+      };
+
+      // for example if we want to access any property say city from above obj then
+      //console.log(person.address.city); //hyd
+
+      // now instead of that only if i want to access the city of that obj using city then we can use destructuring
+      let { name, age } = person; // jo bhi object me property names hai vohi dena chahiye variables names varna undefined aayega.
+      console.log(name); //john
+
+      let { address:{ city }} = person; // to get the nexted obj property name    
+      console.log(city); //hyd
+
+      
+    </script>
+  </body>
+</html>

@@ -411,3 +411,5 @@ replace()
 ## ErrorHandling try and catch.
 
 ## prototype vs __proto__
+
+## destructuring
