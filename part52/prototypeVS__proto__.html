@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype vs __proto__</title>
+  </head>
+  <body>
+    <script>
+      // prototype is related to the function.
+      // __proto__ is related to a object.
+
+      let name = "zaheer";
+      //   js creates a an str object for name  Ex: name = new String("zaheer"); and it also adds __proto__ property to that object.
+
+      // __proto__ is tells about the object which we have created using which constructor function , thats funtion's prototype is added as __proto__ property to the object we have created.
+      //   Ex: name.__proto__  // string
+      // name.__proto__ === String.prototype  //true
+
+      let arr = [1, 2, 3];
+
+      function greeting(name, message) {
+        this.name = name;
+        this.message = message;
+        this.greet = function () {
+          console.log(`hello ${name} ${message}`);
+        };
+      }
+
+      g1 = new greeting("zaheer", "Hi");
+      g1.greet(); // hello zaheer is Hi
+
+      // prototype is also an object we can add properties.
+      // what ever we add properties those will get inherited to the objects we create.
+      greeting.prototype.greeting = function () {
+        console.log("hello", this.name);
+      };
+      // by doing this, the advantage is
+      //when we create a new object lets say g1, so for name it allocates some memory and for message it allocates some memory and for greet it allocates some memory.
+
+      // and now if we create another object it does the same thing.
+      // so, what ever we have in constructor function it allocating seperately for every object we're creating, by doing this so the disadvantage is memory wastage
+      // so, instead of doing this.
+      //we can do this greeting.prototype.greet , so it wont have seperate memory for the object we're creating. and it will become comman for all objects which we are creating. and it links to that constructor function prototype.
+      // and since when we create a object it will get __proto__ which is linked to prototype of that constructor function.
+
+      let personObj = {
+        name: "name",
+        age: "age",
+        //__proto__  //js adds it.
+      };
+      // personObj = new Object();
+      // personObj.__proto__ === Object.prototype //true
+      // personObj.__proto__.__proto__ //null because object prototype and personObj __proto__ are same.
+      // this is the minimum least object.
+      // EX: Object.prototype.__proto__ //null
+      //personObj.hasOwnProperty("name")  //true
+    </script>
+  </body>
+</html>
