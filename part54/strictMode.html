@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>strict mode</title>
+  </head>
+  <body>
+    <script>
+      //   "use strict";
+      // to over come the common mistake we use strict mode:
+      // syntax: "use strict";
+      // x = 10; // we wont get any error, but if we use strict mode then we'll get error message : x is not defined
+      // so we need to use let x = 10
+      //   let x = 10;
+
+      //   note: it should be declare at first line.
+
+      // another Ex:
+      let marks = 40;
+      let pass = false;
+
+      //   if (marks > 40) {
+      //     Pass = true; // no error: but if we use strict mode then we'll get error message: because it is not declared the above pass variable is different and it is different by case sensitive.
+      //   }
+
+      // we can also able to use strict in function
+      //   function test() {
+      //     "use strict";
+      //     x = 1; // x is not defined
+      //   }
+
+      //   test();
+    </script>
+  </body>
+</html>

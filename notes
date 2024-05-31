@@ -413,3 +413,5 @@ replace()
 ## prototype vs __proto__
 
 ## destructuring
+
+## strict mode
