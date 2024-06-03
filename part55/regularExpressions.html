@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Regular Expressions</h1>
+    <script>
+      // Regualar expression is a sequence of characters, helps to create a search pattern.
+      // such as user input is entered correct or not for password we can check it.
+
+      // way to create regular expressions:
+      // 1. RegExp literal notation:
+      // syntax: /pattern/[flags]  //[flags] are optional
+
+      let pattern = /^[0-9]{10}$/; //^ is used to tell startswith and its called meta character.
+      // $ to tell endswith.
+      // [0/1] --> 0 or 1.
+      // [0-9] --> 0 to 9.
+      // {} --> used to define minimum and maximum values length.ex: {2,10}
+      //console.log(pattern.test("9000000000")); //true
+
+      // 2. using RegExp constructor function:
+      // syntax: new RegExp("pattern",[flags])
+      let p = new RegExp("^[0-9]{10}$");
+      //console.log(p.test("1234567890")); //true
+
+      let pat = /^hello$/;
+      //console.log(pat.test("hello"));
+
+      //test() method of regExp object is used to test whether the given string is there or not in a defined pattern.
+
+      //flags like i --> in-caseSensitive: that is whether you given Hello or hello both are same.
+
+      // then what is the diffrence between the new regex and /^ $/  means in constructor function we can use variables if we want using template string
+      // Ex: let reg = new RegExp(`${id}`);
+
+      // there is onemore method apart from test() for the regex object that is exec() method.
+
+      // apart from checking it also provides some extra information
+      let regex = /hello/;
+      let result = regex.exec("hello js ");
+      //console.log(result); //returns an array and also provides the index we it is exactly matching the expression
+
+      //console.log(result.index); //0  //['hello', index: 0, input: 'hello js ', groups: undefined]
+
+      //  g flag is used to search globally (whole) in a string.
+
+      /**
+       * brackets:
+       * [....] -> any one characters Between the brackets
+       * Ex: [a89] => a or 8 or 9
+       *
+       * [^...] -> any one character not between brackets
+       * Ex: [a89] => everything except a,8 and 9
+       *
+       * [0-9] -> any number from 0-9
+       * Ex: 0/1/2/3/4/5/6/7/8/9
+       *
+       * [A-Z] -> any upper case alphabet
+       *
+       * [a-z] -> any lower case alphabet
+       *
+       * [a-Z] --> any lowercase or uppercase.
+       *
+       */
+
+      // Ex:
+      // let reg = /[a89]/;
+      // console.log(reg.test("zaheer")); // true
+      // console.log(reg.test("f")); // false
+
+      //let r = /^a89/;
+      //console.log(r.test("a899mbb")); //true
+
+      let regg = /[a-z]/;
+      //console.log(regg.test("n")); // true
+
+      // quantifiers:
+      // for specifying the number of occurrences of a character.
+      /**
+       *  * --> match zero or more times.
+       *  Ex: bm* => "b", "bm", "bmm", "bmmmm", and so on.
+       *
+       *  + --> match one or more times.
+       *  Ex: j+ => "j", "jj", "jjj", ....
+       *
+       *  ? --> match zero or one time.
+       *  Ex: bs? => "b" or "bs" but not "bss"
+       *
+       *  {n} --> match exactly n times.
+       *  Ex: jab{5} => jabbbbb
+       *
+       *  {n,} --> match at least n times.
+       *  Ex: mb{3,} => "mbbb", "mbbbbb"
+       *
+       *  {n,m} --> match from n to m times.
+       *  Ex: br{3,5}a => "brrrr" or "brrrrr" or "brrrrrr"
+       * */
+
+      let starReg = /sa*/;
+      //console.log(starReg.test("sa")); // s aake uske baad 0 se n times tak kitne bhi rehsakthe a's.
+
+      let plusReg = /sa+/;
+      //console.log(plusReg.test("sa")); // s aake uske baad atleast 1 time a se n times tak a rehsaktha.
+
+      let questionReg = /sa?/;
+      //console.log(questionReg.test("s")); //true that is s ke a ekbar or kitne bhi baar asal nahi rehto bhi a ok. but s rehna chahiye.
+
+      let regexx = /sa{4}/;
+      //console.log(regexx.test("sassaaaa")); //four a's aana chahiye ek s ke baad.
+
+      // meta characters:
+      /**
+       * meta characters are reserved characters
+       *  . -->  it tells any one of the character should come in that place.
+       *
+       *  \d --> instead of writing [0-9] we can give \d both are same.
+       *
+       *  \D --> instead of numbers any one other character should have in it.
+       *
+       *  \w -->  either in small or capital alphabets a to z or digit[0-9] should have in it that is [0-9a-zA-z_]
+       *
+       *  \W --> instead of  [0-9a-zA-z_]
+       *
+       * **/
+
+      let metDotRegex = /he.llo/;
+      //console.log(metDotRegex.test("hedllo")); // d is a one of the character that is placed in the expression in dot's place.
+
+      let metaChar = /[\d]/;
+      // console.log(metaChar.test("d")); //false
+      // console.log(metaChar.test("2")); //true
+
+      let metaChar2 = /[\D]/;
+      //console.log(metaChar2.test("33e43")); //true
+
+      let metaChar3 = /[\w]/;
+      // console.log(metaChar3.test("-"));
+
+      let metaChar4 = /[\W]/;
+      //console.log(metaChar4.test("#")); //true
+    </script>
+  </body>
+</html>
