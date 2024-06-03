@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging</title>
+  </head>
+  <body>
+    <script>
+      // when we write code and if we won't get the expected output then were'we have done the mistake instead of looking into all the lines of code, we can see the output step by step
+      // like what is happening in the line,next line and so on... is called debugging.
+      // we can also use the keyword --> debugger;
+      // stepover diectly next function call kan jatha control aur function body me nahi jatha directly output aatha.
+      // down arrow, i mean step in kya karta matlab function body me andar jake each and every line check karta.
+      // step out of: next breakpoint khaha hai ki vahatak automatically execute kardetha.
+
+      console.log("first line");
+
+      debugger;
+      console.log("second line");
+
+      function add(num1, num2) {
+        console.log("sum of", num1, num2, "is: ", num1 + num2);
+      }
+
+      function sub(num1, num2) {
+        console.log("diff of", num1, num2, "is: ", num1 - num2);
+      }
+
+      function product(num1, num2) {
+        console.log("product of", num1, num2, "is: ", num1 * num2);
+      }
+
+      add(5, 8);
+      sub(5, 8);
+      product(5, 8);
+    </script>
+  </body>
+</html>
