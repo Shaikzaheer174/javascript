@@ -433,3 +433,5 @@ Ex: Cannot read properties of null (reading 'innerText')
 - async means: downlaoding of script will be done parallel with html parsing, but execution should be done once the script is loaded/downlaoded.
 
 in normal script tag <script here it wont work> js code. </script>
+
+## == vs ===

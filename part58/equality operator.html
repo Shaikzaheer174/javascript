@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>== vs ===</title>
+  </head>
+  <body>
+    <script>
+      console.log(2 == "2"); //true, because == operator what it does first means if both are diffrent data types then based on some logic it will convert their datatype then check the values. while comparing js internally string data "2" will be converted to number then the converted value will be compared with 2.
+      console.log(2 === "2"); //false, becuase first if both operands data type is same or not it checks then if it is same then it check the values else false.
+
+      console.log(Number("")); //0
+      // note: if it is not able to convert it to a number then it returns NaN.
+
+      console.log(Number("a")); //NaN
+
+      console.log(0 == ""); //true because
+      console.log(Number("")); //0, empty string get converted into a 0.
+
+      console.log(true == "true"); //false, because, == operator will convert a string into a number if we have string and number then check both values are equal or not. but if a boolean value and string value are getting compared then if any one having a boolean value then js will convert both values to a number format, then the values which are getting then it is compared.Ex
+      console.log(Number(true)); //1
+      console.log(Number("true")); //NaN
+
+      console.log("\t" == 0); //true, because, \t contains 4 empty spaces and if we empty string then js will convert to number so 0.
+
+      console.log("\t" == false); //true
+
+      console.log("\t" == "\n"); //false, here type conversion will not happens because both same same data type. directly it will check the values.
+      // Note:  ==  will only convert(type caste) if both are different types.
+    </script>
+  </body>
+</html>
