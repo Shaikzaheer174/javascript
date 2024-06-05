@@ -419,3 +419,17 @@ replace()
 ## regular expressions
 
 ## debugging
+
+## async vs defer in script tag.
+. <script src="script1.js"></script> in head tag if we add this script tag, js will stop parsing html until js script loaded and executed successfully then only it will parse html. till that if we have any html elements which we need in js scripts then if it is not available then we'll get an error.
+Ex: Cannot read properties of null (reading 'innerText')
+
+- so avoid this we can use two keywords, so that it will continue the html parsing even it is loading the script or executing the script.
+1. async and
+2. differ
+
+- differ means:  <script differ src="script1.js"></script> while loading this script1.js html parsing should not required to stop, it will tell to engine. and the script will execute only after html parsing is done.
+
+- async means: downlaoding of script will be done parallel with html parsing, but execution should be done once the script is loaded/downlaoded.
+
+in normal script tag <script here it wont work> js code. </script>
