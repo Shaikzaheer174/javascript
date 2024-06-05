@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion Example</title>
+  </head>
+  <body>
+    <script>
+      // recursion concept related to functions.
+      // recursion means in a function calling the same function again is called recursion. due to this memory overflow peoblem come we need to make sure it should stop at some point.
+      // Ex:
+      //   function test() {
+      //     test();
+      //   }
+      //test(); // //errorMaximum call stack size exceeded
+
+      // another Example:
+      function printNumber(number) {
+        if (number > 0) {
+          console.log(number);
+          printNumber(number - 1);
+        }
+      }
+
+      printNumber(10); //10,9,8,7,6,5,4,3,2,1
+
+      //   we can acheive this with for loop as well but in code. we have multiple time requirement with different length then we need to write the forloop code again and again with specified length but
+      //   the advantage of recursion is less code. write once use many times.
+      //   reusability.
+
+      // note: the input which we are passing should change at every iteration and at some time based on some condition it should stop.
+    </script>
+  </body>
+</html>

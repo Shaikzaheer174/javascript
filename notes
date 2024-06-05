@@ -435,3 +435,5 @@ Ex: Cannot read properties of null (reading 'innerText')
 in normal script tag <script here it wont work> js code. </script>
 
 ## == vs ===
+
+## recursion
