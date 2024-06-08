@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * pure function:
+       * -------------
+       * 1. it has no side effects i.e., that function should not modify the out side data and the arguments which we pass to that function should not be get effected then those functions are called pure functions and
+       * 2. it is predictable i.e., how many times we pass the arguments[same] to that function we get the same output.
+       **/
+      // Ex:
+      function pure(a, b) {
+        return a * b;
+      }
+
+      console.log(pure(2, 3)); // this function not modifying any out side data as well as the arguments it is not modifying it. and we passing every time with same input and everytime we will get 6 as output if we call n times we get same o/p so we call it predictable.
+
+      let arr = [1, 2, 3];
+
+      function pure1(arr, num) {
+        let newArr = [...arr, num];
+        return newArr;
+      }
+
+      // impure
+      function impure() {
+        console.log("hello world");
+      }
+
+      impure(); //impure function, because it making changes in the console state.
+
+      let x = 10;
+
+      function increase() {
+        x = x + 1;
+        console.log(x);
+      }
+
+      increase(); //it will increase the x value every time we call this function
+    </script>
+  </body>
+</html>
