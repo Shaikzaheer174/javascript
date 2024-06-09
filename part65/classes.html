@@ -32,11 +32,37 @@
         specifications() {
           console.log(`${this.name} has a good battery backup`);
         }
+
+        // getters and setters:
+        // setter is used to the properties of the object
+        // it we initialize the properties directly through the constructor their mat ==y not have validations, so baseed on validation we can set it using setters
+        set BatterySet(b) {
+          if (b <= 0) {
+            alert("Price can not be less than 0");
+          } else {
+            this.battery = b;
+          }
+        }
+
+        // getter
+        get BatteryCapacity() {
+          return `your battery capacity is: ${this.battery}`;
+        }
       }
 
       let mobile1 = new MobileClass("iphone", 70000);
       console.log(mobile1.price); //70000
       mobile1.specifications(); //iphone has a good battery backup
+
+      // setting properties:
+      // note: even though they are functions we need to access it as properties
+      // setter function takes only one parameter and getter can not have parameters.
+      // getters and setters provides security.
+      mobile1.BatterySet = 0; //error
+      mobile1.BatterySet = 5500;
+
+      let cap = mobile1.BatteryCapacity;
+      console.log(cap); //your battery capacity is: 5500
     </script>
   </body>
 </html>
