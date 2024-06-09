@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("memorization...");
+
+      let previousResults = {};
+
+      function sumOfN(n) {
+        if (n in previousResults) {
+          return previousResults[n];
+        } else {
+          let result = 0;
+          for (let i = 0; i <= n; i++) {
+            result += i;
+          }
+          previousResults[n] = result;
+          return result;
+        }
+      }
+
+      console.log(previousResults); //{}
+      console.log(sumOfN(10)); //55
+      console.log(previousResults); //{10: 55}
+
+      //   checking the time taken
+      console.time();
+      console.log(sumOfN(50));
+      console.timeEnd(); //default: 0.322998046875 ms
+
+      console.time();
+      console.log(sumOfN(50));
+      console.timeEnd(); //default: 0.093994140625 ms
+    </script>
+  </body>
+</html>
