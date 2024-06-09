@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("javascript object notation");
+      // json is used to transfer the data
+      // these are key value pairs and keys should be strings and values may be any data type.
+
+      async function json() {
+        let data = await fetch("test.json");
+        let result = await data.json();
+        console.log(result);
+      }
+
+      json();
+
+      let x = [
+        {
+          name: "redmi note 11 pro",
+          price: 22000,
+          details: {
+            ram: "8gb",
+            battery: "5500mah",
+          },
+        },
+        {
+          name: "redmi note 12 pro",
+          price: 23000,
+          details: {
+            ram: "8gb",
+            battery: "500mah",
+          },
+        },
+      ];
+
+      // the data we will send it to server as:
+      console.log(JSON.stringify(x)); //[{"name":"redmi note 11 pro","price":22000,"details":{"ram":"8gb","battery":"5500mah"}},{"name":"redmi note 12 pro","price":23000,"details":{"ram":"8gb","battery":"500mah"}}]
+
+      // JSON vs javascript Objects:
+      // in json keys must be quoted where in object keys not required to be quoted
+      // JS obj
+      let address = {
+        city: "hyderabad",
+        state: "TG",
+        wish: function () {
+          console.log("good morning!");
+        },
+      };
+
+      // in js objects we can have methods but in JSON values must be either strings or numbers or booleans or other objects and arrays but not functions.
+    </script>
+  </body>
+</html>

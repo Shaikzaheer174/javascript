@@ -443,3 +443,7 @@ in normal script tag <script here it wont work> js code. </script>
 ## Currying
 
 ## Pass by value vs pass by reference, call by value vs reference
+
+## JSON
+
+## JSON vs Javascript Object
