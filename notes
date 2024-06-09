@@ -441,3 +441,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## pure and impure functions
 
 ## Currying
+
+## object inheritance

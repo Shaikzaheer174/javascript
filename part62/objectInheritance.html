@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object inheritance</title>
+  </head>
+  <body>
+    <script>
+      // object inheritance means accessing properties from one object to another
+      obj1 = {
+        name: "name1",
+        age: 20,
+      };
+
+      // if we want to create a one more same object like above, in js we have a one of the way is to use Object.create()
+      // EX:
+      obj2 = Object.create(obj1);
+
+      console.log(obj1); //{name: 'name1', age: 20}
+      console.log(obj2); //{}
+
+      console.log(obj2.name); //name1  it is inherited from obj1 since we don't have name property in obj2
+
+      obj2.name = "name2";
+      console.log(obj2.name); //name2
+      console.log(obj2); //{name: 'name2'}
+      obj2.place = "hyd";
+
+      obj3 = Object.create(obj2);
+      console.log(obj3.age); //20   that is from obj1, since it is checking in obj2 and if it is not available then it checks in obj1
+    </script>
+  </body>
+</html>
