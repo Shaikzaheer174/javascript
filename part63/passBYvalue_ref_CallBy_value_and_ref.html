@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // pass by value: in a function the arguments that are passed to the function even if we made any modifications it should not get modified outside the function then its called pass by value else pass by reference
+      // all primitive data types are passed by values
+      // objects are passed by reference. they get modified.
+
+      // Example for pass by value:
+      let x = 10;
+
+      function test(num) {
+        num = num + 1;
+        console.log("inside the function ", num);
+      }
+
+      console.log("before calling the function ", x); //before calling the function  10
+
+      test(x); //inside the function  11    here we passing the value of x to the function not the memory of x or address of x so it wont modify the x outside
+
+      console.log("after calling the function ", x); //after calling the function  10
+
+      // Example for pass by reference:
+      let arr = [6];
+
+      function update(array) {
+        array[0] = 8;
+        console.log("inside the function ", array[0]);
+      }
+
+      console.log("before calling ", arr[0]); //before calling  6
+
+      update(arr); //inside the function  8
+
+      console.log("after calling ", arr[0]); //after calling  8
+    </script>
+  </body>
+</html>

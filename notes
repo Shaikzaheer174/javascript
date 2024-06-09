@@ -442,4 +442,4 @@ in normal script tag <script here it wont work> js code. </script>
 
 ## Currying
 
-## object inheritance
+## Pass by value vs pass by reference, call by value vs reference
