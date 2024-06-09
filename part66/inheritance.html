@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inheritance</title>
+  </head>
+  <body>
+    <script>
+      console.log("inheritance in classes");
+      class Person {
+        constructor(name, phoneNumber) {
+          this.name = name;
+          this.phoneNumber = phoneNumber;
+        }
+
+        getDetails() {
+          console.log(
+            `my name is ${this.name} and my phone number is ${this.phoneNumber}`
+          );
+        }
+      }
+
+      // now, in employee class also we need name and phone number properties but instead of creating the new properties already in person class we defined the properties so to use those its called inheritance.
+      // so one class need to inherit the properties from another class we need to use the key word extends
+      class Employee extends Person {
+        constructor(name, phoneNumber, salary, company) {
+          super(name, phoneNumber);
+          this.salary = salary;
+          this.company = company;
+        }
+      }
+
+      let person1 = new Person("Eira", 1234567890);
+      console.log(person1.phoneNumber); //1234567890
+
+      // employee object:
+      let employee1 = new Employee("john", 9876543210, 35000, "google");
+      console.log(employee1); //{name: 'john', phoneNumber: 9876543210, salary: 35000, company: 'google'}  and [[Prototype]]: Person
+
+      console.log(employee1.getDetails()); //my name is john and my phone number is 9876543210
+    </script>
+  </body>
+</html>

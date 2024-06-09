@@ -494,3 +494,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## classes:
 
 ## getters and setters
+
+## inheritance in classes
