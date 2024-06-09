@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // classes in js were introduced in ES6 version.
+      // classes are used to create objects.
+      // classes are used to create a structure so that same kind of n number of objects can create.
+      // before ES6 we used constructor functions:
+      // Ex:
+      function mobile(name, price) {
+        this.name = name;
+        this.price = price;
+      }
+      m1 = new mobile("redmi", 22000);
+      console.log(m1.name); //redmi
+
+      //   -----------------------------------------------------------
+
+      // classes simplify the object creation.
+      class MobileClass {
+        constructor(n, p) {
+          //here we initialize the properties of an object
+          this.name = n;
+          this.price = p;
+        }
+        //  we can not use function keyword here, since object related functions we called as methods
+        specifications() {
+          console.log(`${this.name} has a good battery backup`);
+        }
+      }
+
+      let mobile1 = new MobileClass("iphone", 70000);
+      console.log(mobile1.price); //70000
+      mobile1.specifications(); //iphone has a good battery backup
+    </script>
+  </body>
+</html>
