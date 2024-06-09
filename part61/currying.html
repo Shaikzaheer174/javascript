@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currying</title>
+  </head>
+  <body>
+    <script>
+      //Currying means converting a function that takes n arguments into n functions that each function take a single argument and returns a function of the argument or result if in case last function.
+
+      // normal
+      function sum(a, b, c, d) {
+        return a + b + c + d;
+      }
+
+      console.log(sum(1, 2, 3, 4));
+
+      // using currying
+      function currying(a) {
+        return function (b) {
+          return function (c) {
+            return function (d) {
+              return a + b + c + d;
+            };
+          };
+        };
+      }
+
+      console.log(currying(1)(2)(3)(4));
+    </script>
+  </body>
+</html>
