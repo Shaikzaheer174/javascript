@@ -447,3 +447,45 @@ in normal script tag <script here it wont work> js code. </script>
 ## JSON
 
 ## JSON vs Javascript Object
+
+## DOM Events:
+# mouse Events:
+- onclick: The event occurs when the user clicks on an element.
+- oncontextmenu: User right-clicks on an element to open a context menu.
+- ondblclick: The user double clicks on an element
+- onmousedown: user presses a mouse button over an element.
+- onmouseleave: pointer moves out of an element
+- onmousemove: the pointer is moving while it is over an element
+- onmouseup: the user releases a mouse button while over an element.
+
+# keyboard events:
+- onkeydown: when the user is pressing a key down.
+- onkeypress: the movement the user starts pressing a key.
+- onkeyup: the user releases a key.
+
+# form events:
+- onblur: When an element loses focus
+- onchange: The content of a form element changes
+- onfocus: An element gets focus
+- onfocusin: When an element is about to get focus
+- onfocusout: The element is about to lose focus
+- oninput: User input on an element
+- oninvalid: when a form element is invalid
+- onreset: when a form is reset
+- onsearch: when user writes something in a search field (for <input="search">)
+- onselect: when the user selects some text
+- onsubmit: when a form is submitted
+
+# Clipboard Events
+- oncopy - User copies the content of an element
+- oncut - The user cuts an element's content
+- onpaste - A user pastes the content in an element
+
+# Drag Events
+- ondrag: An element is dragged
+- ondragend : The user has finished dragging the element
+- ondragenter: The dragged element enters a drop target
+- ondragleave: A dragged element leaves the drop target
+- ondragover: The dragged element is on top of the drop target
+- ondragstart: User starts to drag an element
+- ondrop Dragged element is dropped on the drop target
