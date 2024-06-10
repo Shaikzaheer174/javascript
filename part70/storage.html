@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>session and local storage</title>
+  </head>
+  <body>
+    <script>
+      // data is stored in key value pairs.
+      // to set data in the local storage then
+      localStorage.setItem("name", "zaheer"); //it take key value
+      let name = localStorage.getItem("name");
+      console.log(name); //zaheer
+
+      sessionStorage.setItem("profession", "software engineer"); //
+      let profession = sessionStorage.getItem("profession");
+      console.log(profession); //software engineer
+
+      // Note: session storage means only related to particular session or tab,where localStorage means browser related/
+      // Example: you have open a page in 2 tabs if you delete a item from session storage in one tab it will delete it in that particular tab only where localStorage is if you delete it from one tab it will delete it in other tab as well.
+      // for more go to consoleof particular tab remove the time.
+      // for removing the item : localstorage.removeItem("name")
+
+      //once we close the window tab session storage wll get cleared or cleaned up but local storage will not be cleared.
+
+      //if we give the same name for key then the value will be get modified, it will take the value of the latest key.
+      //Example:
+      //   localStorage.setItem("text", "dd");
+      //   localStorage.setItem("text", "hello");
+      //   localStorage.getItem("text"); //hello
+
+      // if you want to clear the complete data at once. then
+      //   localStorage.clear();
+
+      //   to check how many keys we stored in localStorage we have length property:
+      console.log(localStorage.length);
+
+      //   if we want to store the object as value then
+      let obj = {
+        name: "eira",
+        age: 21,
+        colour: "fair",
+      };
+
+      localStorage.setItem("object", obj);
+      console.log(localStorage.getItem("object")); //[object Object]
+      //   so
+      localStorage.setItem("object", JSON.stringify(obj));
+      console.log(localStorage.getItem("object")); //{"name":"eira","age":21,"colour":"fair"}
+    </script>
+  </body>
+</html>

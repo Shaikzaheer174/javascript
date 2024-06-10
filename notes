@@ -502,3 +502,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## arrow functions
 
 ## callback functions
+
+## local storage and session storage
