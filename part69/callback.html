@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sum(a, b) {
+        b();
+        console.log(a + b);
+      }
+
+      //   sum(1, 2);
+
+      // A funtcion passed as argument to another function is called callback function.
+      //   sum(1, function () {
+      //     console.log("hello world");
+      //   });
+
+      // Another example  if we want to perform some opertaion after one function then if it is asynchronous function then the next function which we have written will get executed you can see output NaN for below example. so avoid these we use call back functions.
+      // Example:
+      function add(a, b) {
+        setTimeout(function () {
+          console.log(a + b);
+        }, 1000);
+      }
+
+      let result = add(10, 10); //20
+
+      square(result); //NaN
+
+      function square(num) {
+        console.log(num * num);
+      }
+
+      // so we need to use callbacks instead:
+      function add1(a, b, callbackFunction) {
+        setTimeout(function () {
+          let addition = a + b;
+          console.log(addition);
+          callbackFunction(addition);
+        }, 1000);
+      }
+
+      add1(10, 10, square);
+    </script>
+  </body>
+</html>
