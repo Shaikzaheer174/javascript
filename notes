@@ -508,3 +508,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## splice() vs slice()
 
 ## JSON stringify() and parse() methods
+
+## shallow copying and deep copying
