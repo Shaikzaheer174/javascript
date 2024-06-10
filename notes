@@ -506,3 +506,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## local storage and session storage
 
 ## splice() vs slice()
+
+## JSON stringify() and parse() methods
