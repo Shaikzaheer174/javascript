@@ -504,3 +504,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## callback functions
 
 ## local storage and session storage
+
+## splice() vs slice()
