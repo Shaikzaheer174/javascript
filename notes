@@ -514,3 +514,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## multi dimensional arrays
 
 ## Ajax,fetch,async await,promises
+
+## Array flattening
