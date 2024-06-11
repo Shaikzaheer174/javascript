@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="para"></p>
+    <button onclick="getData()">Get data with AJAX.</button>
+
+    <br />
+
+    <p class="para1"></p>
+    <button onclick="getData1()">get data with fetch</button>
+
+    <p class="para2"></p>
+    <button onclick="getData2()">get data with fetch async and await</button>
+    <script>
+      // Ajax,fetch,async await,promises
+
+      // AJAX
+      let pElement = document.querySelector(".para");
+      function getData() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "test.txt");
+        xhr.send();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            pElement.innerHTML = this.responseText;
+          }
+        };
+      }
+
+      // fetch()
+      let pElement1 = document.querySelector(".para1");
+      function getData1() {
+        fetch("test.txt")
+          .then((res) => res.text())
+          .then((data) => (pElement1.innerHTML = data));
+      }
+
+      // async await: instead of avoiding promises in above
+      let pElement2 = document.querySelector(".para2");
+      async function getData2() {
+        let res = await fetch("test.txt");
+        let data = await res.text();
+        pElement2.innerHTML = data;
+      }
+    </script>
+  </body>
+</html>

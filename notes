@@ -512,3 +512,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## shallow copying and deep copying
 
 ## multi dimensional arrays
+
+## Ajax,fetch,async await,promises
