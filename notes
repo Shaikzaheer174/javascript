@@ -510,3 +510,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## JSON stringify() and parse() methods
 
 ## shallow copying and deep copying
+
+## multi dimensional arrays
