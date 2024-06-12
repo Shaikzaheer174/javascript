@@ -518,3 +518,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## Array flattening
 
 ## Array sorting
+
+## when to use . or [] while accessing the object properties.
