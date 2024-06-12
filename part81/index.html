@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. directly handling events in html elements: -->
+    <!-- <button onclick="alert('Hello world')">Click me.</button>
+    <button onclick="test()">Click me.</button> -->
+
+    <!-- 2.  using DOM-->
+    <button>click 2nd</button>
+
+    <!-- 3. addeventListener -->
+    <button class="btn">3rd way button</button>
+
+    <script>
+      // Different ways of Event handling.
+      // what ever user performs an activity in a website is a event.
+      // then for that activity we will write code i.e, event handling to perform something.
+      // there are three different ways to handle the event using event handling.
+
+      // 1. directly handling events in html elements:
+      function test() {
+        alert("Hello " + "you have clicked me!");
+      }
+
+      // 2. using DOM:
+      let b = document.querySelector("button");
+      // b.click  = functionName with out paranthesis. or
+      b.onclick = function () {
+        alert("hello this is second way");
+      };
+
+      // 3. using addEventListener:
+      let btn = document.querySelector(".btn");
+      btn.addEventListener("click", test);
+    </script>
+  </body>
+</html>
