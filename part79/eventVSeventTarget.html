@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child">child 1</div>
+      <div class="child">child 2</div>
+      <div class="child">child 3</div>
+      <div class="child">child 4</div>
+      <div class="child">child 5</div>
+    </div>
+
+    <script>
+      let p = document.querySelector(".parent");
+
+      p.onclick = function (e) {
+        console.log("event info");
+        console.log(e);
+        console.log("this");
+        console.log(this);
+        console.log("event.target");
+        console.log(e.target);
+      };
+    </script>
+  </body>
+</html>
