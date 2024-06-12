@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // to know the user location using latitude and longitude
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(getLatLog, error, {
+          maximumAge: 10,
+          timeout: 1000,
+          enableHighAccuracy: true,
+        }); // it will take 2 arg's one is for success and another for failure.  and 3rd arg is optional that is we need to pass the obj.
+      }
+
+      function error(message) {
+        console.log("Error: " + message);
+      }
+
+      function getLatLog(data) {
+        console.log(data); //it will ask permission for location first once it is allowed then it gives latitude and longitude info.
+        console.log(data.coords.latitude);
+        console.log(data.coords.longitude); //then we can use geo coding to get the location using latitude and longitude
+      }
+
+      async function getLocationInfo(latitude, longitude) {
+        const url = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
+
+        try {
+          const response = await fetch(url);
+          if (response.ok) {
+            const data = await response.json();
+            return data;
+          } else {
+            console.error(
+              "Error fetching location information:",
+              response.status
+            );
+            return null;
+          }
+        } catch (error) {
+          console.error("Error fetching location information:", error);
+          return null;
+        }
+      }
+
+      // Example usage  EXample city: hyderabad
+      const latitude = 17.491659;
+      const longitude = 78.391983;
+
+      getLocationInfo(latitude, longitude).then((locationInfo) => {
+        if (locationInfo) {
+          console.log(locationInfo);
+          console.log(locationInfo.address.amenity);
+          console.log("Road -> " + locationInfo.address.road);
+          console.log("Name -> " + locationInfo.display_name);
+        } else {
+          console.log("Error fetching location information");
+        }
+      });
+    </script>
+  </body>
+</html>
