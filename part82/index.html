@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="">Click here</button>
+
+    <button class="stop">stop</button>
+    <script>
+      let btn = document.querySelector("button");
+      let stopBtn = document.querySelector(".stop");
+
+      btn.addEventListener("click", test);
+
+      function test() {
+        alert("clicked me, owww!");
+      }
+
+      // to stop the event listener:
+      stopBtn.addEventListener("click", remove);
+
+      //  or
+      // btn.onclick = null
+
+      function remove() {
+        alert("removed the event listener, sorry for hurting you bye bye!");
+        btn.removeEventListener("click", test);
+      }
+    </script>
+  </body>
+</html>

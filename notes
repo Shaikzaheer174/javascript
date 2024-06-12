@@ -526,3 +526,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## geo location API
 
 ## Different ways of event handling in a webpage
+
+## remove events, or event listeners
