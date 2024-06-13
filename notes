@@ -530,3 +530,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## remove events, or event listeners
 
 ## ways to find an element in an array.
+
+## shuffle arrays
