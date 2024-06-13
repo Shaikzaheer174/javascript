@@ -534,3 +534,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## shuffle arrays
 
 ## filter array of objects
+
+## sort array of objects
