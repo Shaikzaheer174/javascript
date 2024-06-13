@@ -532,3 +532,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## ways to find an element in an array.
 
 ## shuffle arrays
+
+## filter array of objects
