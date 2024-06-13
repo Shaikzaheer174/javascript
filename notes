@@ -536,3 +536,5 @@ in normal script tag <script here it wont work> js code. </script>
 ## filter array of objects
 
 ## sort array of objects
+
+## split and join methods 
