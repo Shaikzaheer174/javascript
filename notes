@@ -540,3 +540,26 @@ in normal script tag <script here it wont work> js code. </script>
 ## split and join methods 
 
 ## event loop.
+
+## Execution context:
+- js engine is responsible for executing(running) our code.
+- Execution context is nothing but an env where our code is stored to execute
+- Execution context created in 2 scenarios.
+1. once for whole js code. //(global execution context)
+2. and when ever a function is called in program, another new execution env will be created.(function execution context)
+
+- when ever execution context is created it has 2 components
+1. memory component // it allows or allocates the memory
+2. code component // code.
+
+- execution context has 2 phases
+1. creation memory //initially it creates a memory and assigns undefined
+2. execution phase // assigns the values
+
+- once it encounters any function calls, then it creates a new function execution context for that function.
+same again 
+1. memory component // it allows or allocates the memory
+also creates a arguments property and length property. and it si only for  function execution context
+2. code component // code.
+
+and call stack will store the call and executes it.
