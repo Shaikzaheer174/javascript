@@ -38,6 +38,12 @@ console.log(techStack.codeEditor); //Web strom
 console.log((techStack["codeEditor"] = "VS Code"));
 console.log(techStack.codeEditor); //VS Code
 
+// deleting the property
+console.log(techStack.name);
+let d = delete techStack.name;
+console.log(d); //true
+console.log(techStack.name);
+
 // 2. using a new keyword with object constructor
 let techStack2 = new Object();
 console.log(typeof techStack2); //object
@@ -70,6 +76,7 @@ function user(name, age, place) {
 }
 
 let user1 = new user("sasa", 26, "hyd");
+// using this method we can easily create as many objects we want.
 console.log(user1.age); //26
 
 user1.hobby = "reading books";
@@ -93,3 +100,4 @@ for (key in user1) {
 
 console.log(Object.keys(user1)); //[ 'name', 'age', 'place', 'login', 'hobby' ]
 console.log(Object.values(user1)); //[ 'sasa', 26, 'hyd', 'reading books',  3: λ ]
+console.log(Object.entries(user1)); //[[ 'name', 'sasa' ],[ 'age', 26 ],[ 'place', 'hyd' ],[ 'login' ],[ 'hobby', 'reading books' ]]

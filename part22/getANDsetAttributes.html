@@ -20,6 +20,7 @@
   </style>
   <body>
     <div id="special">This is a division</div>
+
     <img
       src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&dpr=1"
       alt=""
@@ -34,13 +35,14 @@
     </div>
 
     <script>
+      // Applying styles to the element
       var x = document.getElementById("special");
       // console.log(x.style);
       x.style.color = "red";
       x.style.border = "2px solid black";
 
       // adding attribute class to the element
-      // console.log(x.getAttribute("id")); //special
+      // console.log(x.getAttribute("id")); //special   //to get any attribute value we need to pass it to the getAttribute() method
       x.setAttribute("class", "one");
 
       var y = document.getElementById("myImage1");

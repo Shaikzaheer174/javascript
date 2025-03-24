@@ -8,14 +8,14 @@
   <body>
     <script>
       // it take iterable object as input
-      // spread operator(...) -> it takes an iterable and expands or seperate each element of iterable
+      // spread operator(...) -> it takes an iterable object and expands or seperate each element of iterable
       let arr = [12, 32, 43, 5, 4];
-      //   console.log(arr); //[12, 32, 43, 5, 4]
-      //   console.log(...arr); //12 32 43 5 4
+      console.log(arr); //[12, 32, 43, 5, 4]
+      console.log(...arr); //12 32 43 5 4
 
       // the use of spread operator
       let newArray = [1, 2, arr];
-      //console.log(newArray); //[1, 2, [12, 32, 43, 5, 4] ] instead of completed array we need a separate elements of an array. so we can use spread operator
+      //console.log(newArray); //[1, 2, [12, 32, 43, 5, 4] ] instead of complete array we need a separate elements of an array. so we can use spread operator
 
       let newArray2 = [1, 2, ...arr];
       //console.log(newArray2); //[1, 2, 12, 32, 43, 5, 4]

@@ -30,7 +30,7 @@
 
       // we can also pass the string.
       let d4 = new Date("2024-01-11"); //yyyy-MM-dd
-      //console.log(d4);
+      // console.log(d4);
 
       let d5 = new Date("1-11-2024");
       //console.log(d5); //Thu Jan 11 2024
@@ -59,9 +59,11 @@
         "nov",
         "dec",
       ];
-      console.log(months[d6.getMonth()]); //jan //d6.getMonth() --> it returns a number so
+      console.log(d6.getMonth()); //0
+      console.log(months[d6.getMonth()]); //jan //d6.getMonth() --> it returns a number '0' so zero'th index
 
       let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+      console.log(d6.getDay()); //4
       console.log(days[d6.getDay()]); //thu
 
       d6.setFullYear(2021);

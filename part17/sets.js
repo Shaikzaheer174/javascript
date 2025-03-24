@@ -1,7 +1,7 @@
 //sets
-// we can set a element only once i.e, we can store duplicate elements therefore it is a collection of unique values
+// we can set a element only once i.e, we can't store duplicate elements therefore it is a collection of unique values
 // where array is a collection of values either unique or deplicate
-// set can be used for id property.
+// set can be used for id property in real life, since userid's should not be duplicate.
 
 // to define a set
 let set1 = new Set();
@@ -42,7 +42,9 @@ console.log(s2.has("z")); //false because element z is not available in the set
 // to check the size of the set
 console.log(s1.size); //4
 
-// console.log(s1.clear());
+console.log(s1); //Set { 0: 10, 1: 20, 2: 30, 3: 40 }
+console.log(s1.clear());
+console.log(s1); //Set {}
 console.log(s2); //Set {}
 
 for (element of s2) {

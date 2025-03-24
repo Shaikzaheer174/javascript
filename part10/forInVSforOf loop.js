@@ -7,9 +7,9 @@ for (let element = 0; element <= fruits.length; element++) {
 }
 
 // so to over come we have for in loop
-for (element in fruits) {
+for (index in fruits) {
   // it points the position(index) rather than value.
-  console.log(`${element} --> ${fruits[element]}`); //"0 --> apple" "1 --> banana" "2 --> mango" "3 --> orange" "4 --> pinapple"
+  console.log(`${index} --> ${fruits[index]}`); //"0 --> apple" "1 --> banana" "2 --> mango" "3 --> orange" "4 --> pinapple"
 }
 
 // for of loop
@@ -29,5 +29,5 @@ for (element of students) {
 
 for (key in students) {
   //it points the key if we use the for in loop with the object:
-  console.log(key + "  " + students[key]); //1 2 3
+  console.log(key + "  " + students[key]); //'1 apple', '2 ball', '3 cat'
 }

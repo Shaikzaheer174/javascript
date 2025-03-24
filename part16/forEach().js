@@ -5,7 +5,7 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // });
 
 // for every element in a array to perform any action or to run any function then we use this forEach method
-// syntax: arr.forEach(function funNmame(currentItem, index, arr)) {//code}
+// syntax: arr.forEach(function funName(currentItem, index, arr)) {//code}
 // the foreach method contains three parameters
 // 1. element
 // 2. index  --optional
@@ -14,7 +14,7 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 /*
 aar.forEach(functionName);
 
-ex: arr.forEach(test);
+ex: arr.forEach(test); 
 
 function test(item, index, arr) {
     code
@@ -38,6 +38,7 @@ console.log(salaries); //incremented salaries --> [ 5500, 6600, 7700, 8800, 9900
 
 // way2
 salaries.forEach(incSalary);
+
 function incSalary(salary, index, arr) {
   let increment = salary / 10;
   salaries[index] = salary + increment;

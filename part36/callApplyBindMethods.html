@@ -37,18 +37,17 @@
       };
 
       getSalary.call(employee, "call method"); //20000,  therefore now it refers employee object instead of global object.
+      getSalary.call(employee2, "call method"); //30000, call method
 
-      getSalary.call(employee2, "call method");
-
-      //getSalary.apply(employee, 'apply') //CreateListFromArrayLike called on non-object   therefore we need pass the args in the form of array
-
-      getSalary.apply(employee, ["apply method"]);
+      // getSalary.apply(employee, 'apply') //error, that is CreateListFromArrayLike called on non-object   therefore we need pass the args in the form of array
+      getSalary.apply(employee, ["apply method 🥺"]);
 
       //getSalary.bind(employee, "bind method"); // it wont be called because it returns a function so we need to store it some variable and then we need to call it.
-
+      // getSalary.bind(employee, "bind method")(); //or below one.
       let bindMethod = getSalary.bind(employee, "bind method");
       bindMethod();
 
+      console.log("................another Example.....");
       // another Example:
       let myObject = {
         salary: 100000,

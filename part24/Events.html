@@ -6,11 +6,12 @@
     <title>Events</title>
   </head>
   <body>
-    <!--inline event handler-->
+    <!--inline event handler means using event attributes-->
     <button onclick="document.body.style.backgroundColor='green'">
       change Background
     </button>
     <button onclick="closeKaro()">click to close</button>
+    <hr />
 
     <!-- using event properties in JS -->
     <button id="btn">change color 2</button>
@@ -34,8 +35,8 @@
       }
 
       function changeBackgroundColor(event) {
-        // console.log(this); //<button id="btn">change color 2</button>
-        console.log(event); //to check the event
+        // console.log(this); // jis element pe event laga hua hai voh element ka details function me this keyword se access karsakthe hai //<button id="btn">change color 2</button>
+        console.log(event); //to check the event information
         document.body.style.backgroundColor = "red";
       }
 
@@ -60,8 +61,8 @@
         var letters = "0123456789ABCDEF";
         var color = "#"; //to take hexadecimal color we use # and 6 random character from the above letters string
         for (var i = 0; i < 6; i++) {
-          var r = Math.floor(Math.random() * 16); //math.random dgenerates one number bw 0 to 1 that is assume 0.6 then we are multiplying it with 16 so assume like 3.6 somthing we get then with the helpof floor() we remove decimal number. and integer number will be get concatinated
-          color = color + letters[r];
+          var r = Math.floor(Math.random() * 16); //math.random generates one number bw 0 to 1 that is assume 0.6 then we are multiplying it with 16 so assume like 9.6 somthing we get then with the helpof floor() we remove decimal number. and integer number will be get concatinated
+          color = color + letters[r]; //color variable now consist of # and 6 digits value
         }
         document.body.style.background = color;
       }

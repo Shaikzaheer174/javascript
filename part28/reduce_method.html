@@ -32,7 +32,18 @@
       // 3rd iteration: acc = 105
       // retuns 105
 
-      console.log(sum);//105
+      console.log(sum); //105
+
+
+      // another way:
+      let findSum = [1, 2, 3, 4, 5];
+
+      function calculate(acc, element) {
+        return acc + element;
+      }
+      
+      let total = findSum.reduce(calculate);
+      console.log(total);
     </script>
   </body>
 </html>

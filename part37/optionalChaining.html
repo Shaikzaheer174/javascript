@@ -9,8 +9,8 @@
     <h1 id="heading">Optional chaining</h1>
 
     <script>
-      // so optional chaininh matlab agar koi value undefined or null aaye tho voh further execute nahi karta check bhi nahi karta
-      //  because ek object lere uska kuch prop access karni chahre agar voh object hi nahi rehta tho error aajatha hai null aur null object nahi hotha hai aur property access nahi karte right to avoid we use optional chaining.
+      // so optional chaining matlab agar koi value undefined or null aaye tho voh further execute nahi karta check bhi nahi karta simply undefined return karta hai instead of error.
+      // because ek object lere uska kuch prop access karni chahre agar voh object hi nahi rehta tho error aajatha hai null aur Null object nahi hotha hai aur property access nahi karte right therfore to avoid we use optional chaining.
 
       // Ex:
       let person = {
@@ -45,7 +45,7 @@
       let h1 = document.getElementById("heading").innerText;
       console.log(h1);
 
-      //let h2 = document.getElementById("headingd").innerText; // Cannot read properties of null (reading 'innerText')   // null.innertext therefore null obje anahi aur usme innertext prop nhi hai
+      // let h2 = document.getElementById("headingd").innerText; // Cannot read properties of null (reading 'innerText')   // null.innertext therefore null obje anahi aur usme innertext prop nahi hai
       // null, underfined hue jab   ? further nahi read hotha.   simply return karta hai undefined.
       //let h3 = document.getElementById("headingd")?.innerText; // undefined
       //console.log(h2);

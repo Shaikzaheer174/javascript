@@ -1,4 +1,5 @@
 const form = document.getElementById("form");
+console.dir(form);
 const uname = document.getElementById("uname");
 const email = document.getElementById("email");
 const password = document.getElementById("password");

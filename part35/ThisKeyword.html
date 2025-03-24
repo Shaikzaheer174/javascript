@@ -12,7 +12,7 @@
       name="Click"
       id=""
       value="click me"
-      onclick="console.log(this); console.log(this.value); this.style.background='green'"
+      onclick="console.log(this); console.log(this.value); this.style.background='green'; console.log(this.type)"
     />
 
     <script>
@@ -42,8 +42,8 @@
         name: "s",
       };
 
-      //console.log(this.add);
-      //console.log(this.obj); //therefore jo bhi hum global scope me define karte hai na this.voh use kare tho voh window object me aatha hai.
+      // console.log(this.add);
+      // console.log(this.obj); //therefore jo bhi hum global scope me define karte hai na this.voh use kare tho voh window object me aatha hai.
 
       // value of this keyword inside a regular function:
       function regularFun() {
@@ -54,7 +54,7 @@
       //regularFun(); // therefore normal function me bhi this bolthe so window obj ko he represent karta hain.
 
       // value of this keyword inside a method:
-      // an objects method if we use a this keyword then it represents ?
+      // In an objects method, if we use a "this" keyword then it represents ?
       // Example:
       var movie = {
         name: "happy days",

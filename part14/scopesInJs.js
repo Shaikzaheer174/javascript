@@ -3,7 +3,7 @@ function test() {
   var x = 10;
   return x;
 }
-// var y = x + 10;
+// var y = x + 10; //any kind of variable (let, var, const) declared inside a function cannot be accessed outside of a function.
 // console.log(y); //x is not defined
 
 // ------------------------------------------------------------

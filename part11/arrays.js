@@ -24,7 +24,7 @@ console.log(letters.length); //100
 letters.unshift("1");
 console.log(letters);
 
-letters.shift("1");
+letters.shift();
 console.log(letters);
 
 console.log(letters.indexOf("T")); //5

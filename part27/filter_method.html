@@ -13,12 +13,60 @@
 
       let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20];
 
-      let evenNumbers = numbers.filter(function (element) { //if we use map it returns true or false
+      let evenNumbers = numbers.filter(function (element) {  //if we use map it returns true or false but in filter method if it is true then its value is returned.
         return element % 2 == 0;
       });
 
       console.log(numbers);
       console.log(evenNumbers);
+
+      // use cases:
+      let users = [
+        {
+          firstname: "apple",
+          lastname: "fruit",
+          age: 22,
+          gender: "male",
+          address: "kashmir",
+        },
+        {
+          firstname: "ball",
+          lastname: "game",
+          age: 2,
+          gender: "male",
+          address: "india",
+        },
+        {
+          firstname: "inky",
+          lastname: "girl",
+          age: 18,
+          gender: "female",
+          address: "india",
+        },
+        {
+          firstname: "pinky",
+          lastname: "girl",
+          age: 16,
+          gender: "female",
+          address: "india",
+        },
+        {
+          firstname: "vijju",
+          lastname: "gijju",
+          age: 19,
+          gender: "male",
+          address: "no where",
+        },
+      ];
+
+      // to get only male users"
+      let males = users.filter((user) => {
+          return user.gender === "male";
+        })
+        .map((user) => {
+          return user.firstname;
+        });
+      console.log(males); // ['apple', 'ball', 'vijju']
     </script>
   </body>
 </html>

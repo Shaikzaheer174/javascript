@@ -78,6 +78,29 @@
       counter3(); //2
 
       // main advantage ye hai ki kiska value usko starting se initialize hotha. kitne intances create karo.
+
+
+      // practice:
+      function uniqueClicks() {
+        let click = 0;
+
+        function clickCounter() {
+          click++;
+          console.log(click);
+        }
+
+        return clickCounter;
+      }
+
+      let oneclick = uniqueClicks();
+      oneclick(); //1
+
+      let twoclick = uniqueClicks();
+      twoclick(); //1
+
+      let threeclick = uniqueClicks();
+      threeclick(); //1
+      threeclick(); //2
     </script>
   </body>
 </html>

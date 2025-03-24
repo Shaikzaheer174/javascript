@@ -1,3 +1,4 @@
+part1:
 - Javascript can be used for dynamic interaction for our web page.
 - JS it is a scripting language. means suppose you have written 10lines of code and if the error is at 9th line then till line 8 it will get output.
 - 3 ways we can print in js.
@@ -6,6 +7,7 @@
 2. document.write() // our page is treated as object in javascript and we call it as document.
 3. innerhtml // <h1>this is innerhtml</h1> the content between the tags.
 
+part2:
 - Roadmap:
 ----------
   Basics:
@@ -35,12 +37,14 @@
 23. OPPs concept
 24. JSON
 
+part3:
 variables
 ---------
 - we cannot define const without initalizing. else it will throw an error  Missing initializer in const declaration.
 - using var we can define same variable name n times but cannot with let and const
 - let and const have block scope.
 
+part4:
 data types:
 -----------
 primitive datatypes means primary data types
@@ -53,12 +57,13 @@ special:
 - undefined
 - null
 
-Composite:
+Composite: grouping primitives and creating a data type is called as a composite.
 - array
 - object
 
 - - javascript is a dynamic typed language.
 
+part5:
 operators:
 ---------
 Arithmetic opeartors
@@ -80,41 +85,45 @@ converts numbers into binary system then performs the operations.
 ternary operators:
 Three operands --> condition ? expression1 : expression2;
 
+part6:
 - typecasting or type conversion
 - implicit and explicit conversion
 
-
+part7:
 types of conditional statements:
 1. if statement
 2. if-else statement
 3. if-else if-else statement
 4. switch statement
 
+part8:
 loops:
 to do a task multiple times then we use loops.
 loops are also called as iterative statements
 1. for loop
 2. while loop
 3. do-while loop
+the above three loops are used for sequence of statements or a block of code, or iterate till the condition is false we use above three loops.
 4. for in loop
 5. for of loop
 
+part9:
 template literals:
 - `${}`
 
-
+part10:
 for in VS for of loops
 -used in iterable data types like strings, arrays, objects in these for every element if we want to iterate over then we use the for..in and for..of loops
 
-
+part11:
 arrays:
 1. why arrays
 2. how to declare arrays
 3. how to access arrays elements
-4. how to update or add elements to the array
+4. how to update or add elements to the array (array is a hetrogenious type means any data type we can store in it.)
 5. methods on arrays
 
-
+part12:
 Functions:
 what is a function
 why functions
@@ -122,19 +131,25 @@ how to create functions
 how to call functions
 what is function expression
 
+part13:
 types of functions
 
+part14:
 Scopes in JavaScript
 Global scope
 Local scope
 block level scope
 
+part15:
 ## default and rest parameters
 
+part16:
 ## foreach method
 
+part17:
 ## sets
 
+part18:
 ## objects
 - 5 ways we can create objects in javascript
 - 1. Object literals
@@ -143,14 +158,17 @@ block level scope
 - 4. Object.create() method
 - 5. Classes
 
+part19:
 ## console methods
 
+part20:
 ## Dom
 - document object model
-- by using HTML DOM javascript can access, change or remove any elements of html document and also can create new elements at any position
-- document object has properties and methods so by using those we can select/modify/remove/create html elements and we can also add/remove/change styles tp HTML elements.
+- by using HTML DOM javascript can access, change or remove any elements of html document and also can create new elements at any position.
+- when webpage is loaded,browser creates DOM of the webpage.
+- document object has properties and methods so by using those we can select/modify/remove/create html elements and we can also add/remove/change styles to those HTML elements.
 We have 5 methods to select HTML elements:
-1. document.getElementById("idName") --> returns element with the specified id.
+1. document.getElementById("idName") --> returns element with the specified id. and if don't have the specified id then returns null.
 2. document.getElementsByClassName('className) --> returns list of all elements belong to the specified class.
 3. document.getElementsByTagName("tagName") --> returns list of all elements with the specified tag.
 4. document.querySelector(".class/#id/tagName") --> returns the first object matching css style selector.
@@ -165,6 +183,7 @@ document also has properties few of them are :
 6. document.images
 7. document.scripts
 
+part21:
 DOM manipulation:
 1. how to create HTML elements. //only empty tags will get created with out content ex: <h1></h1>
 2. how to set content to element. // we need to set content
@@ -174,11 +193,13 @@ DOM manipulation:
 6. how to remove child element // to remove element's child
 7. how to replace element // to replace an element.
 
+part22:
 add/change styles in javascript
 1. how to change style of element
 2. how to get attribute value of an element
 3. how to set/change attribute of an element.
 
+part23:
 ## model windows
 - model windows means after opening our web page, upon that a window is opened(model window) once it is opened, without closing it we can not further interact without web page.
 -js contains mainly 3 model windows.
@@ -186,6 +207,7 @@ add/change styles in javascript
 2. prompt() - to take some input from the user
 3. confirm() - to get confirmation from the user.
 
+part24:
 ## Events
 1. what is event and types of events
 2. what is event handler
@@ -193,6 +215,10 @@ add/change styles in javascript
 
 # Event:
 Event is nothing but an action. 
+eventlistener is a function or method that listens to specific events (ex: click), when that event is triggered then it get activated
+and executes the function called eventhandler.
+Using eventlistener when the event is occurred then we execute the particular function (eventhandler).
+
 in webpage also what ever user do is everything is an event.
 
 # who generates an events
@@ -215,7 +241,7 @@ click, double click, mouseover, mouseout, mouse move
 key down, key up, key press
 
 # focus events:
-focus, blur, focusin, focusou
+focus, blur, focusin, focusout
 
 # form events:
 submit, reset, change
@@ -236,7 +262,7 @@ EX: let btn = document.getElementById("b1)
     btn.addEventListener(eventName, function/anonymous fun)
 
 
-## settimeout and settimeinterval() functions
+## setTimeout() and settimeinterval() functions
 
 var a = setTimeout(
         function (name) {
@@ -247,7 +273,7 @@ var a = setTimeout(
         "zaheer"
       );
 
-a stores the id of the function
+a stores the timer id of the function
 and we cancel the function execution without executing after a particular time by using
 clearInterval(a)
 
@@ -255,8 +281,16 @@ clearInterval(a)
 ## map() method:
 - it is related to arrays method. 
 - it is used for modify already existing array data and create's a new array with modified data we can use map() method.
+- Suppose, you receive a list of users objects and you need to extract only the names of the users into new array. 
 
 ## filter() method:
+-  used to filter arrays data 
+
+note: 
+  why we are using maps and filters in the sense
+  Ex: for(let i = 0; i <5; i++){
+        console.log(users[i].firstname)
+      }  //but it does not create an array and doesn't stores the values inside it. and we cannot do chaining like map the for that result we filter then so on...
 
 ## reduce() method:
 - it is also used for arrays.
@@ -276,14 +310,16 @@ these are callback functions
 
 ## spread operator:
 
-
 ## form validation
 
 ## callback functions
+- callback function is a function that is passing as a an argument to the another function
 
 ## higher Order Functions
 
 ## closure
+- closure is --> if we  decalre any variables in a function, after running that function if we can use those variables outside of that function then it is called as closure.
+
 
 ## this keyword
 - function is different and method is different that is if we define a function in an object then that is called as method.
@@ -292,6 +328,7 @@ these are callback functions
 ## call,apply,bind methods 
 
 ## optional chaining 
+- null, underfined aaye jab koi object me aur uske baad koi object properties access kar rahe tho error aatha hai, therfore ? use karne se simply undefined return karte hain aur uske niche ka code bhi run hotha hain.
 
 ## date object
 
@@ -330,7 +367,7 @@ charCodeAt()
 repeat() 
 replace()
 
-##  wuindow object
+##  window object
 - document
 - innerWidth
 - outerWidth
@@ -398,7 +435,7 @@ replace()
 
 - status --> returns the status number of the request 200 ok, 404 not found.
 
-- statusText --> returns teh status text (ok or not found)
+- statusText --> returns the status text (ok or not found)
 
 ## callback hell 
 
