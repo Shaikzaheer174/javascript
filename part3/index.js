@@ -18,9 +18,10 @@ var name = 6;
 }
 console.log(num2); //100 using var we can get the block scope value as well.
 
-console.log(variable); //undefined, because agar variable if it is defined using var then usse pahile access karetho undefined bolkar dhikahta. and it assumes like we decared but not initialized.
+console.log(variable); //undefined, because agar variable if it is defined using var then usse pahile access karetho undefined bolkar dhikahta. and it assumes like we decared but not defined.
 var variable = 100;
 
 // if we use let and const
 //console.log(var1); //Cannot access 'var1' before initialization
 let var1 = 10;
+

@@ -17,7 +17,10 @@
       alert("hello world");
       document.write("hello world");
       document.getElementById("headingH1").innerHTML = "h1 tag content Changed using JS!"
+      // document.getElementById("abc").innerHTML = "H1 after script!" //it will give error since it is not able to find the element. if the element is before script then only it can get otherwise it will give error.
+      // console.log(document.getElementById("abc")); //it is not reached since above is error, if above code is commented then it will be null.
     </script>
+    <h1 id="abc">Hello javascript</h1>
 
     <!-- from external -->
   </body>

@@ -24,8 +24,8 @@ part2:
 11. form validations
 12. DOM manipulation
 13. events
-14. BOM elements //browser object modal
-    advance: 
+14. BOM elements //browser object modal --> The BOM includes objects such as Window, Navigator, Location, History, and Screen.
+  advance: 
 15. prototyping
 16. proto type inheritance
 17. call backs
@@ -43,6 +43,7 @@ variables
 - we cannot define const without initalizing. else it will throw an error  Missing initializer in const declaration.
 - using var we can define same variable name n times but cannot with let and const
 - let and const have block scope.
+- varaibles constains only a-zA_Z0-9 and _$
 
 part4:
 data types:
